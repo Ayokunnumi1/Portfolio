@@ -57,18 +57,19 @@ body {
   padding: 10px 0;
 }
 
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
 ul {
   list-style: none;
+  display: none;
 }
 
 @media screen and (min-width: 640px) {
   .Hamburger-logo {
     display: none;
+}
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 }
