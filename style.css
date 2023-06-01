@@ -46,3 +46,29 @@ body {
   line-height: 52px;
   color: #172b4d;
 }
+
+.Intro-description {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+  padding: 10px 0;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 640px) {
+  .Hamburger-logo {
+    display: none;
+}
+}
