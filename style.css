@@ -31,11 +31,18 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 0 20px;
-    /* align-items: center; */
-    /* margin-top: 114px; */
 }
 
 .background-image {
   min-width: 100%;
   height: 10vh;
+}
+
+.Intro {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
 }
