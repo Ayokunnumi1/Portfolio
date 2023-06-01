@@ -6,3 +6,16 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+body {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .padding: 10px 12px;
+}
