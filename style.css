@@ -59,17 +59,20 @@ body {
 
 ul {
   list-style: none;
+}
+
+.nav-bar {
   display: none;
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 768px) {
   .Hamburger-logo {
     display: none;
-}
+  }
 
   .nav-bar {
     display: flex;
     flex-direction: row;
     gap: 10px;
-}
+  }
 }
