@@ -26,7 +26,6 @@ body {
   background-position: top;
   background-size: cover;
   min-height: 600px;
-  border: 3px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +64,21 @@ ul {
   display: none;
 }
 
+.ul-logo {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.My-logo {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .Hamburger-logo {
     display: none;
@@ -74,5 +88,9 @@ ul {
     display: flex;
     flex-direction: row;
     gap: 10px;
+  }
+  
+  .main-section {
+    padding: 0 150px;
   }
 }
