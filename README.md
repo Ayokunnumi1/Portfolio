@@ -94,6 +94,22 @@ After cloning the repository, navigate into the project's directory. If there ar
  
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
+ ## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Project Showcase**
+- [ ] **Testimonials and recommendations**
+- [ ] **Interactive resume or CV**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+ ## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
 
 ## ⭐️ Show your support <a name="support"></a>
 
