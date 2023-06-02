@@ -9,7 +9,7 @@
 
 body {
   width: 100%;
-  overflow: hidden;
+  height: 200vh;
 }
 
 .logo {
@@ -77,6 +77,14 @@ ul {
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+}
+
+.parent--container {
+  border: 3px solid green;
+}
+
+.child--container {
+
 }
 
 @media screen and (min-width: 768px) {
