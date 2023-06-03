@@ -9,7 +9,7 @@
 
 body {
   width: 100%;
-  background: #E5E5E5;
+  background: #e5e5e5;
 }
 
 .logo {
@@ -94,7 +94,7 @@ body {
   display: flex;
   gap: 1.5rem;
   padding: 15px 0;
-  font-family: 'Poppins';
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 13px;
@@ -138,6 +138,23 @@ p {
   color: #344563;
 }
 
+.skill--list li {
+  padding: 4px 12px;
+  background: #ebebff;
+  border-radius: 8px;
+  color: hsla(234, 100%, 69%, 1);
+}
+
+.dropdown-list li {
+  display: flex;
+  align-items: center;
+  background: #f7f7f9;
+  gap: 1rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
 .ul--list li:first-child {
   list-style: none;
   font-weight: 12px;
@@ -152,13 +169,6 @@ p {
   display: flex;
   gap: 2rem;
   padding: 20px 0;
-}
-
-.skill--list li {
-  padding: 4px 12px;
-  background: #ebebff;
-  border-radius: 8px;
-  color: hsla(234, 100%, 69%, 1);
 }
 
 button {
@@ -257,6 +267,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
 }
+
 .dropdown p > span {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -271,16 +282,6 @@ h2 {
   font-weight: 500;
   font-size: 15px;
   color: #253858;
-}
-
-.dropdown-list li {
-  display: flex;
-  align-items: center;
-  background: #f7f7f9;
-  gap: 1rem;
-  border-radius: 10px;
-  margin-top: 10px;
-  padding: 10px;
 }
 
 .hero-icon-container {
@@ -308,6 +309,7 @@ h2 {
   .main-section {
     padding: 0 150px;
   }
+
   .about--section {
     width: 100%;
     display: grid;
@@ -315,7 +317,7 @@ h2 {
     gap: 2rem;
     padding: 20px 100px;
   }
-  
+
   .dropdown p {
     display: flex;
     justify-content: space-between;
@@ -326,7 +328,7 @@ h2 {
     display: flex;
     gap: 2rem;
   }
- 
+
   .dropdown-list li {
     background: #f7f7f9;
     border-radius: 8px;
@@ -336,7 +338,7 @@ h2 {
     justify-content: center;
     padding: 20px 30px;
   }
-  
+
   .parent--container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
