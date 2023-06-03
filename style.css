@@ -94,10 +94,6 @@ body {
   padding: 15px 0;
 }
 
-.skill--list {
-  padding: 20px 0;
-}
-
 .see--project {
   background: #4053fc;
   box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
@@ -134,26 +130,6 @@ p {
   color: #344563;
 }
 
-.about--myself p {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #344563;
-}
-
-.about--myself--head {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  display: flex;
-  align-items: center;
-  color: #172b4d;
-}
-
 .ul--list li:first-child {
   list-style: none;
 }
@@ -166,6 +142,7 @@ p {
   list-style: none;
   display: flex;
   gap: 2rem;
+  padding: 20px 0;
 }
 
 .skill--list li {
@@ -213,8 +190,73 @@ h1 {
   color: #6070ff;
 }
 
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7f8cff;
+}
 
+.about--section {
+  background-color: #fff;
+  margin-top: 3rem;
+  border-top-right-radius: 60px;
+  padding: 100px 15px;
+  overflow: hidden;
+}
 
+.about--section .about--text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #344563;
+  padding: 5px 0;
+}
+
+.about--section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #172b4d;
+}
+
+.about--section .hero-connect-text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7f8cff;
+  padding: 7px 0;
+}
+
+.dropdown:not(:first-child) {
+  padding: 15px 0;
+  border-bottom: 1px solid  #dfe1e6;
+}
+
+.dropdown p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dropdown p > span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+}
+
+.dropdown-list li span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #253858;
+}
 
 @media screen and (min-width: 768px) {
   .Hamburger-logo {
