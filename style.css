@@ -9,6 +9,7 @@
 
 body {
   width: 100%;
+  background: #E5E5E5;
 }
 
 .logo {
@@ -81,7 +82,8 @@ body {
 .work--section {
   width: 90%;
   margin: auto;
-  border: 3px solid red;
+  display: grid;
+  gap: 7rem;
 }
 
 .first--child img {
@@ -92,6 +94,12 @@ body {
   display: flex;
   gap: 1.5rem;
   padding: 15px 0;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #344563;
 }
 
 .see--project {
@@ -132,6 +140,7 @@ p {
 
 .ul--list li:first-child {
   list-style: none;
+  font-weight: 12px;
 }
 
 .ul--list li::marker {
@@ -175,9 +184,13 @@ h1 {
 }
 
 .parent--container {
-  display: grid;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
   padding: 15px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .button button {
@@ -200,10 +213,12 @@ h2 {
 
 .about--section {
   background-color: #fff;
-  margin-top: 3rem;
   border-top-right-radius: 60px;
   padding: 100px 15px;
   overflow: hidden;
+  width: 90%;
+  margin: 3rem auto;
+  margin-bottom: 0;
 }
 
 .about--section .about--text {
@@ -258,6 +273,27 @@ h2 {
   color: #253858;
 }
 
+.dropdown-list li {
+  display: flex;
+  align-items: center;
+  background: #f7f7f9;
+  gap: 1rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.hero-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.dropdown img {
+  width: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .Hamburger-logo {
     display: none;
@@ -271,5 +307,39 @@ h2 {
 
   .main-section {
     padding: 0 150px;
+  }
+  .about--section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 20px 100px;
+  }
+  
+  .dropdown p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-list {
+    display: flex;
+    gap: 2rem;
+  }
+ 
+  .dropdown-list li {
+    background: #f7f7f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 30px;
+  }
+  
+  .parent--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
