@@ -252,13 +252,13 @@
         </p>
         <form action="https://formspree.io/f/{form_id}" method="post">
           <input type="text" name="name" id="name"
-            required
+            required maxlength="30"
             placeholder="Write your name here">
           <input type="email" name="email" id="email"
             required
             placeholder="Write your email here">
           <textarea name="message" id="message"
-            required
+            required maxlength="500"
             placeholder="Write your message here">
           </textarea>
           <div>
