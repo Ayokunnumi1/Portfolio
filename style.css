@@ -9,7 +9,7 @@
 
 body {
   width: 100%;
-  overflow: hidden;
+  background: #e5e5e5;
 }
 
 .logo {
@@ -56,7 +56,7 @@ body {
   padding: 10px 0;
 }
 
-ul {
+.header--list {
   list-style: none;
 }
 
@@ -79,6 +79,227 @@ ul {
   line-height: 20px;
 }
 
+.work--section {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 7rem;
+}
+
+.first--child img {
+  width: 100%;
+}
+
+.ul--list {
+  display: flex;
+  gap: 1.5rem;
+  padding: 15px 0;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #344563;
+}
+
+.see--project {
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  outline: none;
+  margin: 20px 0;
+  color: #6070ff;
+  padding: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 1px solid #7f8cff;
+}
+
+.see--project:hover {
+  border: 1px solid #7f8cff;
+  border-radius: 8px;
+  background: #6070ff;
+  color: #fff;
+}
+
+.see--project:disabled {
+  color: #5e6c84;
+  background: #ffff;
+  border: 1px solid #7f8cff;
+}
+
+.see--project:focus {
+  color: #fff;
+  background: #2230d2;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+}
+
+.skill--list li {
+  padding: 4px 12px;
+  background: #ebebff;
+  border-radius: 8px;
+  color: hsla(234, 100%, 69%, 1);
+}
+
+.dropdown-list li {
+  display: flex;
+  align-items: center;
+  background: #f7f7f9;
+  gap: 1rem;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.ul--list li:first-child {
+  list-style: none;
+  font-weight: 12px;
+}
+
+.ul--list li::marker {
+  color: gray;
+}
+
+.skill--list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 20px 0;
+}
+
+button {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #396df2;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.parent--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.button button {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #6070ff;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.about--section {
+  background-color: #fff;
+  border-top-right-radius: 60px;
+  padding: 100px 20px;
+  overflow: hidden;
+  width: 100%;
+  margin: 3rem auto;
+  margin-bottom: 0;
+}
+
+.about--section .about--text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #344563;
+  padding: 5px 0;
+}
+
+.about--section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #172b4d;
+}
+
+.about--section .hero-connect-text {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #7f8cff;
+  padding: 7px 0;
+}
+
+.dropdown:not(:first-child) {
+  padding: 15px 0;
+  border-bottom: 1px solid  #dfe1e6;
+}
+
+.dropdown p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown p > span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #000;
+}
+
+.dropdown-list li span {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #253858;
+}
+
+.hero-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.dropdown img {
+  width: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .Hamburger-logo {
     display: none;
@@ -92,5 +313,40 @@ ul {
 
   .main-section {
     padding: 0 150px;
+  }
+
+  .about--section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 20px 100px;
+  }
+
+  .dropdown p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-list {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .dropdown-list li {
+    background: #f7f7f9;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px 30px;
+  }
+
+  .parent--container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
