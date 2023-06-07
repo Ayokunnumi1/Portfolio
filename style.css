@@ -25,7 +25,7 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  min-height: 600px;
+  /* min-height: 600px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -301,9 +301,14 @@ h2 {
   width: 30px;
 }
 
-.contact--section {
+.contact--div {
   background: #6070FF;
-
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid red;
 }
 
 .contact--me {
@@ -322,7 +327,14 @@ h2 {
   font-size: 20px;
   line-height: 28px;
   color: #ebebff;
+  text-align: center;
 }
+
+.contact--list {
+  list-style: none;
+}
+
+
 
 @media screen and (min-width: 768px) {
   .Hamburger-logo {
