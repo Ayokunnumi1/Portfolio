@@ -301,6 +301,19 @@ h2 {
   width: 30px;
 }
 
+.contact--section {
+  background: #6070FF;
+
+}
+.contact--me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #fff;
+}
+
 @media screen and (min-width: 768px) {
   .Hamburger-logo {
     display: none;
