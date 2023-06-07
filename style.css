@@ -301,6 +301,10 @@ h2 {
   width: 30px;
 }
 
+.contact--form {
+  padding: 1rem;
+}
+
 .contact--section {
   background-image: url(images/contact-shape.png), url(images/contact-bkground.png);
   background-repeat: no-repeat;
@@ -310,11 +314,8 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid red;
   width: 100%;
   padding-top: 103px;
-  /* gap: 1.5rem;
-   */
 }
 
 .contact--me {
