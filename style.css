@@ -305,6 +305,7 @@ h2 {
   background: #6070FF;
 
 }
+
 .contact--me {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -312,6 +313,15 @@ h2 {
   font-size: 40px;
   line-height: 52px;
   color: #fff;
+}
+
+.contact--paragraph {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ebebff;
 }
 
 @media screen and (min-width: 768px) {
