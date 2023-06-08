@@ -305,26 +305,30 @@ h2 {
 }
 
 .contact--section {
-  background-image: url(images/contact-shape.png), url(images/contact-bkground.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  width: 100%;
+  background: #6070ff;
+  background-image: url(images/contact-shape.png);
+  border-top-left-radius: 70px;
   padding-top: 103px;
-}
+  margin-bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: 207px;
+  background-position: right 0% top 55%;
+  background-repeat: no-repeat;
+  }
 
 .contact--me {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 40px;
   line-height: 52px;
   color: #fff;
   text-align: center;
+  margin-top: 30px;
 }
 
 .contact--paragraph {
@@ -335,7 +339,7 @@ h2 {
   line-height: 28px;
   color: #ebebff;
   text-align: center;
-  margin-bottom: 52px;
+  margin-bottom: 20px;
   margin-top: 12px;
 }
 
@@ -357,13 +361,17 @@ input {
 }
 
 textarea {
-  padding: 15px 16px;
-  margin-top: 18px;
-  height: 170px;
+  padding: 10px 16px;
+  margin-top: 10px;
+  height: 140px;
   border-radius: 8px;
   width: 100%;
   border: none;
   outline: none;
+}
+
+.contact-button {
+  margin-top: 15px;
 }
 
 @media screen and (min-width: 768px) {
