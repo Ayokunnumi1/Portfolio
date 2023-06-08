@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,900;1,500;1,600&display=swap');
 
 * {
   margin: 0;
@@ -25,11 +25,11 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
-  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 20px;
+  height: 100vh;
 }
 
 .background-image {
@@ -298,6 +298,80 @@ h2 {
 
 .dropdown img {
   width: 30px;
+}
+
+.contact--form {
+  padding: 1rem;
+}
+
+.contact--section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #6070ff;
+  background-image: url(images/contact-shape.png);
+  border-top-left-radius: 70px;
+  padding-top: 103px;
+  margin-bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: 207px;
+  background-position: right 0% top 55%;
+  background-repeat: no-repeat;
+}
+
+.contact--me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 52px;
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact--paragraph {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ebebff;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
+
+.contact--list {
+  list-style: none;
+}
+
+.contact--input {
+  padding: 5px 5px;
+}
+
+input {
+  margin: 10px 0;
+  border-radius: 8px;
+  width: 100%;
+  padding: 15px 16px;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  padding: 10px 16px;
+  margin-top: 10px;
+  height: 140px;
+  border-radius: 8px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.contact-button {
+  margin-top: 15px;
 }
 
 @media screen and (min-width: 768px) {
