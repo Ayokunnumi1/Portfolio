@@ -90,6 +90,14 @@ body {
   width: 100%;
 }
 
+.order-one {
+  order: 1;
+}
+
+.order-two {
+  order: 2;
+}
+
 .ul--list {
   display: flex;
   gap: 1.5rem;
@@ -422,5 +430,37 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+  }
+
+  .first-desktop-pic .img {
+    content: url(./images/First-desktop-pic.svg);
+  }
+
+  .order-one {
+    order: 2;
+  }
+
+  .order-two {
+    order: 1;
+  }
+
+  .img-two {
+    content: url(./images/2nd\ Desktop2\ pic.svg);
+  }
+
+  .img-three {
+    content: url(./images/2nd\ pic.svg);
+  }
+
+  .img-four {
+    content: url(./images/22nd\ pic.svg);
+  }
+
+  .second--child {
+    padding: 24px;
+  }
+
+  .parent--container {
+    padding: 24px;
   }
 }
