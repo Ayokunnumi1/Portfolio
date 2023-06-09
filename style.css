@@ -59,6 +59,10 @@ h1 {
   font-size: 40px;
   line-height: 52px;
   color: #172b4d;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-iteration-count: initial;
+  animation-direction: normal;
 }
 
 .Intro-description {
@@ -477,5 +481,19 @@ textarea {
 
   .logo {
     padding: 16px 143px;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
