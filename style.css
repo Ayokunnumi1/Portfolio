@@ -497,3 +497,16 @@ textarea {
     transform: translateX(0);
   }
 }
+
+.scale-item:hover {
+  -webkit-animation: scale-text 2s;
+  animation: scale-text 2s;
+}
+@keyframes scale-text {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.05;
+  }
+}
