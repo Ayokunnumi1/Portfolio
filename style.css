@@ -45,6 +45,12 @@ h1 {
 
 .nav-bar {
   display: none;
+  color: #344563;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .ul-logo {
@@ -400,9 +406,9 @@ textarea {
     background-position: left 85% top 40%;
     background-size: 100%;
     height: 90vh;
-    border: 3px solid red;
+    /* border: 3px solid red; */
     border-bottom-left-radius: 150px;
-    padding: 0 80px;
+    padding: 0 200px;
   }
 
   /* .inner-main-section {
@@ -419,7 +425,7 @@ textarea {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    padding: 20px 100px;
+    padding: 30px 100px;
   }
 
   .dropdown p {
@@ -483,5 +489,11 @@ textarea {
 
   .logo {
     padding: 16px 143px;
+  }
+
+  .contact--section {
+    background: #6070ff;
+    background-image: url(./images/contact-bkground-icons.png);
+    background-size: contain;
   }
 }
