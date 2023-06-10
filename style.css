@@ -18,14 +18,16 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 12px;
+  background: #fff;
 }
 
-.My-logo {
+.My-logo a {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  color: #6070ff;
 }
 
 h1 {
@@ -397,11 +399,10 @@ textarea {
     background-image: url(images/Header\ bg.svg);
     background-position: left 85% top 40%;
     background-size: 100%;
-    margin: 0 auto;
     height: 90vh;
     border: 3px solid red;
     border-bottom-left-radius: 150px;
-    /* padding-top: 20vh; */
+    padding: 0 80px;
   }
 
   /* .inner-main-section {
