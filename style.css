@@ -579,28 +579,12 @@ textarea {
     padding: 24px;
   }
 
-  .first-desktop-pic .img {
-    content: url(./images/First-desktop-pic.svg);
-  }
-
   .order-one {
     order: 2;
   }
 
   .order-two {
     order: 1;
-  }
-
-  .img-two {
-    content: url(./images/2nd\ Desktop2\ pic.svg);
-  }
-
-  .img-three {
-    content: url(./images/2nd\ pic.svg);
-  }
-
-  .img-four {
-    content: url(./images/22nd\ pic.svg);
   }
 
   .second--child {
