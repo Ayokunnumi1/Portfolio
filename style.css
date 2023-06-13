@@ -579,9 +579,10 @@ textarea {
     padding: 24px;
   }
 
-  .first-desktop-pic .img {
+
+  /* .first-desktop-pic .img {
     content: url(./images/First-desktop-pic.svg);
-  }
+  } */
 
   .order-one {
     order: 2;
@@ -591,7 +592,7 @@ textarea {
     order: 1;
   }
 
-  .img-two {
+  /* .img-two {
     content: url(./images/2nd\ Desktop2\ pic.svg);
   }
 
@@ -601,7 +602,7 @@ textarea {
 
   .img-four {
     content: url(./images/22nd\ pic.svg);
-  }
+  } */
 
   .second--child {
     padding: 24px;
