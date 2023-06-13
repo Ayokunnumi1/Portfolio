@@ -91,8 +91,18 @@ After cloning the repository, navigate into the project's directory. If there ar
 - GitHub: [@Ayokunnumi1][https://github.com/Ayokunnumi1]
 - Twitter: [@Ayokunnumi1] [https://twitter.com/AyokunnumiA]
 - LinkedIn: [Ayokunnumi Omololu] [https://www.linkedin.com/in/ayokunnumiomololu]
+
+👤**Uzair-Manzoor**
+
+- GitHub: [@Uzair-Manzoor] https://github.com/Uzair-Manzoor
+- Twitter: [@UzairKiyani5555] https://twitter.com/UzairKiyani5555
+
+👤**chudisoft**
+- GitHub: [@chudisoft] https://github.com/chudisoft
+
  
  <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
  
  ## 🔭 Future Features <a name="future-features"></a>
 
@@ -102,6 +112,7 @@ After cloning the repository, navigate into the project's directory. If there ar
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
+
  ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
@@ -118,10 +129,12 @@ If you like this project. show your support by following my github account.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 I give thanks to the Microverse team for creating this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 📝 License <a name="license"></a>
 
