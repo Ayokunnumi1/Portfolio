@@ -31,8 +31,26 @@ header {
   position: relative;
 }
 
+.hide-link,
+li {
+  position: none;
+  width: unset;
+  background-color: unset;
+
+  /* height: 100%;
+    min-height: 100%; */
+
+  /* left: 0;
+    top: 0; */
+  padding-top: unset;
+  padding-left: unset;
+  display: unset;
+  flex-direction: unset;
+
+  /* gap: 1.5rem; */
+}
+
 .nav-link {
-  /* display: none; */
   position: absolute;
   width: 100%;
   background-color: rgba(96, 112, 255, 0.9);
