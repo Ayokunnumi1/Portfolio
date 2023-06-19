@@ -28,10 +28,28 @@ header {
   border-bottom-left-radius: 7%;
   background-color: white;
   margin-bottom: 50px;
+  position: relative;
 }
 
 .nav-link {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  width: 100%;
+  background-color: rgba(96, 112, 255, 0.9);
+  height: 100%;
+  min-height: 100%;
+  left: 0;
+  top: 0;
+  padding-top: 100px;
+  padding-left: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.close-container {
+  position: absolute;
+  z-index: 100;
 }
 
 .toolbar-section a {
@@ -45,9 +63,10 @@ header {
 .nav-link li > a {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  color: #344563;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
 }
 
 .header-nav > a:hover {
@@ -438,6 +457,27 @@ textarea {
   .header-nav ul {
     display: flex;
     gap: 2rem;
+  }
+
+  .nav-link {
+    position: unset;
+    width: unset;
+    background-color: unset;
+    height: unset;
+    padding: unset;
+    flex-direction: row;
+  }
+
+  .close-container {
+    display: none;
+  }
+
+  .nav-link li > a {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #344563;
   }
 
   .see--project {
