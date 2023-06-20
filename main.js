@@ -9,6 +9,7 @@ const menuOpen = () => {
 };
 const menuClose = () => {
   navLink.classList.add('hide-link');
+  body.style = '';
 };
 
 closeIcon.addEventListener('click', menuClose);
