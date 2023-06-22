@@ -176,11 +176,7 @@ h1 {
   width: 100%;
 }
 
-.order-one {
-  order: 1;
-}
-
-.order-two {
+.parent--container:nth-child(even) .first--child {
   order: 2;
 }
 
@@ -229,6 +225,10 @@ h1 {
 .get--button:focus {
   color: #fff;
   background: #2230d2;
+}
+
+.second {
+ margin-bottom: 50px;
 }
 
 p {
@@ -454,6 +454,80 @@ textarea {
 
 .contact-button {
   margin-top: 20px;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2000;
+  background-color: #c1c7d0b6;
+  padding: 20px;
+  /* display: none; */
+}
+
+.show-popup {
+  display: block;
+}
+
+.pop-up .overlay {
+  background: #fff;
+  width: 99%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.overlay .detail-img {
+  width: 100%;
+}
+
+.pop-up .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.pop-up .head h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #091e42;
+  text-transform: capitalize;
+}
+
+.pop-up .pop-up-close-icon {
+  cursor: pointer;
+}
+
+.pop-up .project-description .experience-list {
+  padding-bottom: 20px;
+}
+
+.pop-up .flex-pop {
+  margin-top: 20px;
+}
+
+.pop-up-desc {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  padding-bottom: 10px;
+}
+
+.see-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
