@@ -3,7 +3,6 @@ const navLink = document.querySelector('.nav-link');
 const hamburger = document.querySelector('.toolbar-hamburger');
 const headerSection = document.querySelector('.header-hero-section');
 const toolBarSection = document.querySelector('.toolbar-section > a');
-
 const menuOpen = () => {
   navLink.classList.remove('hide-link');
   headerSection.classList.add('blur-header');
