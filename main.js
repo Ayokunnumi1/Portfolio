@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 const closeIcon = document.querySelector('.close-container');
 const navLink = document.querySelector('.nav-link');
 const hamburger = document.querySelector('.toolbar-hamburger');
@@ -103,9 +104,11 @@ const loadWorkSection = (data) => {
   skillList01.className = 'skill--list';
   prDetailCont01.appendChild(skillList01);
   const tech01a = document.createElement('li');
+  // eslint-disable-next-line prefer-destructuring
   tech01a.innerText = data[0].skills[0];
   skillList01.appendChild(tech01a);
   const tech01b = document.createElement('li');
+  // eslint-disable-next-line prefer-destructuring
   tech01b.innerText = data[0].skills[1];
   skillList01.appendChild(tech01b);
   const tech01c = document.createElement('li');
