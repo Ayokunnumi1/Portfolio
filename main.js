@@ -1,4 +1,5 @@
 /* eslint-disable prefer-destructuring */
+/* Mobile Menu */
 const closeIcon = document.querySelector('.close-container');
 const navLink = document.querySelector('.nav-link');
 const hamburger = document.querySelector('.toolbar-hamburger');
@@ -15,12 +16,16 @@ const menuClose = () => {
   body.style = '';
 };
 
+/* Load Works Section */
+
 const projectsData = [
   {
     title: 'Tonic',
     year: '2015',
-    shortname: 'CANOPY',
+    clientname: 'CANOPY',
     role: 'Back End Dev',
+    desktopDescription:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s.",
     description:
       'A daily selection of privately personalized reads; no accounts or sign-ups required.',
     skills: ['HTML', 'CSS', 'JavaScript'],
@@ -31,7 +36,7 @@ const projectsData = [
   {
     title: 'Multi-Post Stories',
     year: '2015',
-    shortname: 'CANOPY',
+    clientname: 'CANOPY',
     role: 'Back End Dev',
     description:
       'A daily selection of privately personalized reads; no accounts or sign-ups required.',
@@ -43,7 +48,7 @@ const projectsData = [
   {
     title: 'Multi-Post Stories',
     year: '2015',
-    shortname: 'CANOPY',
+    clientname: 'CANOPY',
     role: 'Back End Dev',
     description:
       'A daily selection of privately personalized reads; no accounts or sign-ups required.',
@@ -55,7 +60,7 @@ const projectsData = [
   {
     title: 'Multi-Post Stories',
     year: '2015',
-    shortname: 'CANOPY',
+    clientname: 'CANOPY',
     role: 'Back End Dev',
     description:
       'A daily selection of privately personalized reads; no accounts or sign-ups required.',
@@ -88,9 +93,9 @@ const loadWorkSection = (data) => {
   const infoList01 = document.createElement('ul');
   infoList01.className = 'ul--list';
   prDetailCont01.appendChild(infoList01);
-  const shortname01 = document.createElement('li');
-  shortname01.innerText = data[0].shortname;
-  infoList01.appendChild(shortname01);
+  const clientname01 = document.createElement('li');
+  clientname01.innerText = data[0].clientname;
+  infoList01.appendChild(clientname01);
   const role01 = document.createElement('li');
   role01.innerText = data[0].role;
   infoList01.appendChild(role01);
@@ -140,9 +145,9 @@ const loadWorkSection = (data) => {
   const infoList02 = document.createElement('ul');
   infoList02.className = 'ul--list';
   prDetailCont02.appendChild(infoList02);
-  const shortname02 = document.createElement('li');
-  shortname02.innerText = data[1].shortname;
-  infoList02.appendChild(shortname02);
+  const clientname02 = document.createElement('li');
+  clientname02.innerText = data[1].clientname;
+  infoList02.appendChild(clientname02);
   const role02 = document.createElement('li');
   role02.innerText = data[1].role;
   infoList02.appendChild(role02);
@@ -190,9 +195,9 @@ const loadWorkSection = (data) => {
   const infoList03 = document.createElement('ul');
   infoList03.className = 'ul--list';
   prDetailCont03.appendChild(infoList03);
-  const shortname03 = document.createElement('li');
-  shortname03.innerText = data[2].shortname;
-  infoList03.appendChild(shortname02);
+  const clientname03 = document.createElement('li');
+  clientname03.innerText = data[2].clientname;
+  infoList03.appendChild(clientname02);
   const role03 = document.createElement('li');
   role03.innerText = data[2].role;
   infoList03.appendChild(role03);
@@ -240,9 +245,9 @@ const loadWorkSection = (data) => {
   const infoList04 = document.createElement('ul');
   infoList04.className = 'ul--list';
   prDetailCont04.appendChild(infoList04);
-  const shortname04 = document.createElement('li');
-  shortname04.innerText = data[3].shortname;
-  infoList04.appendChild(shortname04);
+  const clientname04 = document.createElement('li');
+  clientname04.innerText = data[3].clientname;
+  infoList04.appendChild(clientname04);
   const role04 = document.createElement('li');
   role04.innerText = data[3].role;
   infoList04.appendChild(role04);
@@ -272,6 +277,26 @@ const loadWorkSection = (data) => {
 
 loadWorkSection(projectsData);
 
+/* Pop Up */
+
+const prDetailsButton = document.querySelectorAll('.see--project')
+const popUpCloseIcon = document.querySelector('.pop-up-close-icon')
+const popUpWindow = document.querySelector('#modal')
+
+const openPopUp = () => {
+  popUpWindow.style.display = 'block'
+  body.style = 'overflow: hidden;'
+}
+
+const closePopUp = () => {
+  popUpWindow.style.display = 'none'
+  body.style = ''
+}
+
+popUpCloseIcon.addEventListener('click', closePopUp)
+prDetailsButton.forEach((item) => {
+  item.addEventListener('click', openPopUp);
+});
 closeIcon.addEventListener('click', menuClose);
 hamburger.addEventListener('click', menuOpen);
 navLink.addEventListener('click', menuClose);

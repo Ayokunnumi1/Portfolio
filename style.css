@@ -32,6 +32,12 @@ header {
   position: relative;
 }
 
+.pop-up-desc-desk,
+.pop-up .skill-list-desktop,
+.overlay .detail-img-deskfdetail {
+  display: none;
+}
+
 .nav-link {
   position: absolute;
   width: 100%;
@@ -284,7 +290,7 @@ p {
   display: flex;
   align-items: center;
   list-style: none;
-  list-style-type: disc;
+  list-style-type: none;
   gap: 2rem;
   flex-wrap: wrap;
 
@@ -536,7 +542,8 @@ textarea {
 }
 
 .pop-up {
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -560,7 +567,13 @@ textarea {
 }
 
 .overlay .detail-img {
+  display: block;
   width: 100%;
+  height: 250px;
+  background-image: url('images/project-Image03.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  
 }
 
 .pop-up .head {
@@ -833,22 +846,77 @@ textarea {
   }
 
   .pop-up {
+    height: 100vh;
     width: 100%;
     padding: 30px;
   }
 
   .pop-up .overlay {
+    display: flex;
+    flex-direction: column;
     width: 80%;
+    height: 95%;
+    max-height: 1163px;
   }
 
-  .overlay .detail-img {
-    width: 100%;
+  .pop-up .project-description {
+    display: flex;
+    flex-direction: column;
+    max-height: 920px;
+    height: 55.55%;
   }
+
+  .overlay .detail-img-desk {
+    display: block;
+    background-image: url('images/First-desktop-pic.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 90.25%;
+    }
 
   .pop-up .flex-pop {
     display: grid;
     align-items: start;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
+  }
+
+  .pop-up-desc,
+  .pop-up .skill-list,
+  .overlay .detail-img {
+    display: none;
+  }
+
+  .pop-up-desc-desk {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #344563;
+    padding-bottom: 10px;
+  }
+
+  .pop-up .skill-list-desktop {
+    padding: 4px 12px;
+    display: flex;
+    list-style: none;
+    list-style-type: none;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .skill-list-desktop li {
+    padding: 4px 12px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    color: #6070ff;
+    background: #ebebff;
+    border-radius: 5px;
   }
 }
