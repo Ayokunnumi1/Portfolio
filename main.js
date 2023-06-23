@@ -3,17 +3,23 @@
 const closeIcon = document.querySelector('.close-container');
 const navLink = document.querySelector('.nav-link');
 const hamburger = document.querySelector('.toolbar-hamburger');
+const headerSection = document.querySelector('.header-hero-section');
 const body = document.getElementsByTagName('body')[0];
 const workSection = document.querySelector('.work--section');
+const toolBarSection = document.querySelector('.toolbar-hamburger');
 
 const menuOpen = () => {
   navLink.classList.remove('hide-link');
-  body.style = 'overflow: hidden;';
+  headerSection.classList.add('blur-header');
+  toolBarSection.classList.add('blur-logo');
+  hamburger.classList.add('blur-hamburger');
 };
 
 const menuClose = () => {
   navLink.classList.add('hide-link');
-  body.style = '';
+  headerSection.classList.remove('blur-header');
+  toolBarSection.classList.remove('blur-logo');
+  hamburger.classList.remove('blur-hamburger');
 };
 
 /* Load Works Section */
@@ -284,126 +290,24 @@ const loadWorkSection = (data) => {
 loadWorkSection(projectsData);
 
 /* Pop Up */
+
+const prDetailsButton = document.querySelectorAll('.see--project')
+const popUpCloseIcon = document.querySelector('.pop-up-close-icon')
 const popUpWindow = document.querySelector('#modal')
 
-const openPopUp = (data) => {
+const openPopUp = () => {
   popUpWindow.style.display = 'block'
   body.style = 'overflow: hidden;'
-  const popUpContainer = document.createElement('div')
-  popUpContainer.className = 'overlay'
-  popUpWindow.appendChild(popUpContainer)
-
-  const popUpHeader =  document.createElement('div')
-  popUpHeader.className = 'head'
-  popUpContainer.appendChild(popUpHeader)
-  const popUpTitle = document.createElement('h2')
-  popUpTitle.className = 'project-heading'
-  popUpTitle.innerText = data[0].title
-  popUpHeader.appendChild(popUpTitle)
-  const popUpCloseIcon = document.createElement('img')
-  popUpCloseIcon.className = 'pop-up-close-icon'
-  popUpCloseIcon.src = 'images/pop-up-close-icon.png'
-  popUpHeader.appendChild(popUpCloseIcon)
-
-  const popUpInfoCont=  document.createElement('div')
-  popUpInfoCont.className = 'project-description'
-  popUpContainer.appendChild(popUpInfoCont)
-  const popUpInfoList = document.createElement('ul')
-  popUpInfoList.className = 'experience-list'
-  popUpInfoCont.appendChild(popUpInfoList)
-  const popUpClient = document.createElement('li')
-  popUpClient.innerText = data[0].clientname
-  popUpInfoList.appendChild(popUpClient)
-  const popUpRole = document.createElement('li')
-  popUpRole.innerText = data[0].role
-  popUpInfoList.appendChild(popUpRole)
-  const popUpYear = document.createElement('li')
-  popUpYear.innerText = data[0].year
-  popUpInfoList.appendChild(popUpYear)
-  const popUpImgDesk = document.createElement('div')
-  popUpImgDesk.className = 'detail-img-desk'
-  popUpInfoCont.appendChild(popUpImgDesk)
-  const popUpImg = document.createElement('div')
-  popUpImg.className = 'detail-img'
-  popUpInfoCont.appendChild(popUpImg)
-
-  const popUpDescCont =  document.createElement('div')
-  popUpDescCont.className = 'flex-pop'
-  popUpContainer.appendChild(popUpDescCont)
-  const popUpDescDesk = document.createElement('p')
-  popUpDescDesk.className = 'pop-up-desc-desk'
-  popUpDescDesk.innerText = data[0].desktopDescription
-  popUpDescCont.appendChild(popUpDescDesk)
-  const popUpDesc = document.createElement('p')
-  popUpDesc.className = 'pop-up-desc'
-  popUpDesc.innerText = data[0].description
-  popUpDescCont.appendChild(popUpDesc)
-  const popUpListButton = document.createElement('div')
-  popUpListButton.className = 'side-pop'
-  popUpDescCont.appendChild(popUpListButton)
-  const popUpSkillListDesk = document.createElement('ul')
-  popUpSkillListDesk.className = 'skill-list-desktop'
-  popUpListButton.appendChild(popUpSkillListDesk)
-  const desktopSkill01 = document.createElement('li')
-  desktopSkill01.innerText = data[0].desktopskills[0]
-  popUpSkillListDesk.appendChild(desktopSkill01)
-  const desktopSkill02 = document.createElement('li')
-  desktopSkill02.innerText = data[0].desktopskills[1]
-  popUpSkillListDesk.appendChild(desktopSkill02)
-  const desktopSkill03 = document.createElement('li')
-  desktopSkill03.innerText = data[0].desktopskills[2]
-  popUpSkillListDesk.appendChild(desktopSkill03)
-  const desktopSkill04 = document.createElement('li')
-  desktopSkill04.innerText = data[0].desktopskills[3]
-  popUpSkillListDesk.appendChild(desktopSkill04)
-  const desktopSkill05 = document.createElement('li')
-  desktopSkill05.innerText = data[0].desktopskills[4]
-  popUpSkillListDesk.appendChild(desktopSkill05)
-  const popUpSkillList = document.createElement('ul')
-  popUpSkillList.className = 'skill-list'
-  popUpListButton.appendChild(popUpSkillList)
-  const popUpSkill01 = document.createElement('li')
-  popUpSkill01.innerText = data[0].skills[0]
-  popUpSkillList.appendChild(popUpSkill01)
-  const popUpSkill02 = document.createElement('li')
-  popUpSkill02.innerText = data[0].skills[1]
-  popUpSkillList.appendChild(popUpSkill02)
-  const popUpSkill03 = document.createElement('li')
-  popUpSkill03.innerText = data[0].skills[2]
-  popUpSkillList.appendChild(popUpSkill03)
-  const popUpButtonCont = document.createElement('div')
-  popUpButtonCont.className = 'see-container'
-  popUpListButton.appendChild(popUpButtonCont)
-  const seeButtonLink = document.createElement('a')
-  popUpButtonCont.appendChild(seeButtonLink)
-  const seeButton = document.createElement('button')
-  seeButtonLink.appendChild(seeButton)
-  const seeBtnTxt = document.createElement('span')
-  seeBtnTxt.innerText = 'see live'
-  seeButton.appendChild(seeBtnTxt)
-  const seeBtnIcon = document.createElement('img')
-  seeBtnIcon.src = 'images/see-live-icon.png'
-  seeButton.appendChild(seeBtnIcon)
-  const sourceButtonLink = document.createElement('a')
-  popUpButtonCont.appendChild(sourceButtonLink)
-  const sourceButton = document.createElement('button')
-  sourceButtonLink.appendChild(sourceButton)
-  const sourceBtnTxt = document.createElement('span')
-  sourceBtnTxt.innerText = 'see source'
-  sourceButton.appendChild(sourceBtnTxt)
-  const sourceBtnIcon = document.createElement('img')
-  sourceBtnIcon.src = 'images/see-source-icon.png'
-  sourceButton.appendChild(sourceBtnIcon)
-  popUpCloseIcon.addEventListener('click', closePopUp)
 }
 
 const closePopUp = () => {
   popUpWindow.style.display = 'none'
-  const popUpContainer = document.querySelector('.overlay')
-  popUpContainer.parentElement.removeChild(popUpContainer)
   body.style = ''
 }
 
+popUpCloseIcon.addEventListener('click', closePopUp)
+prDetailsButton.forEach((item) => {
+  item.addEventListener('click', openPopUp);
+});
 closeIcon.addEventListener('click', menuClose);
 hamburger.addEventListener('click', menuOpen);
-navLink.addEventListener('click', menuClose);
