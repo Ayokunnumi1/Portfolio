@@ -279,21 +279,21 @@ loadWorkSection(projectsData);
 
 /* Pop Up */
 
-const prDetailsButton = document.querySelectorAll('.see--project')
-const popUpCloseIcon = document.querySelector('.pop-up-close-icon')
-const popUpWindow = document.querySelector('#modal')
+const prDetailsButton = document.querySelectorAll('.see--project');
+const popUpCloseIcon = document.querySelector('.pop-up-close-icon');
+const popUpWindow = document.querySelector('#modal');
 
 const openPopUp = () => {
-  popUpWindow.style.display = 'block'
-  body.style = 'overflow: hidden;'
-}
+  popUpWindow.style.display = 'block';
+  body.style = 'overflow: hidden;';
+};
 
 const closePopUp = () => {
-  popUpWindow.style.display = 'none'
-  body.style = ''
-}
+  popUpWindow.style.display = 'none';
+  body.style = '';
+};
 
-popUpCloseIcon.addEventListener('click', closePopUp)
+popUpCloseIcon.addEventListener('click', closePopUp);
 prDetailsButton.forEach((item) => {
   item.addEventListener('click', openPopUp);
 });

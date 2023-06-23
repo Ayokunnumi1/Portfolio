@@ -573,7 +573,6 @@ textarea {
   background-image: url('images/project-Image03.png');
   background-size: contain;
   background-repeat: no-repeat;
-  
 }
 
 .pop-up .head {
@@ -873,7 +872,7 @@ textarea {
     background-repeat: no-repeat;
     width: 100%;
     height: 90.25%;
-    }
+  }
 
   .pop-up .flex-pop {
     display: grid;
