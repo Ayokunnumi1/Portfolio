@@ -19,7 +19,7 @@
 - [📝 License](#license)
 
 
-# 📖 <a name="about-project">Hello Microverse</a>
+# 📖 <a name="about-project">Portfolio-setup-and-mobile-first</a>
 
 This repository contains the source codes of my Microverse Second Project called the "portfolio project". It showcases my skills and expertise in building the navbar and header sections. 
 ## 🛠 Built With <a name="built-with"></a>
