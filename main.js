@@ -3,17 +3,23 @@
 const closeIcon = document.querySelector('.close-container');
 const navLink = document.querySelector('.nav-link');
 const hamburger = document.querySelector('.toolbar-hamburger');
+const headerSection = document.querySelector('.header-hero-section');
 const body = document.getElementsByTagName('body')[0];
 const workSection = document.querySelector('.work--section');
+const toolBarSection = document.querySelector('.toolbar-hamburger');
 
 const menuOpen = () => {
   navLink.classList.remove('hide-link');
-  body.style = 'overflow: hidden;';
+  headerSection.classList.add('blur-header');
+  toolBarSection.classList.add('blur-logo');
+  hamburger.classList.add('blur-hamburger');
 };
 
 const menuClose = () => {
   navLink.classList.add('hide-link');
-  body.style = '';
+  headerSection.classList.remove('blur-header');
+  toolBarSection.classList.remove('blur-logo');
+  hamburger.classList.remove('blur-hamburger');
 };
 
 /* Load Works Section */
@@ -404,7 +410,23 @@ const loadWorkSection = (data) => {
 loadWorkSection(projectsData);
 
 /* Pop Up */
+const prDetailsButton = document.querySelectorAll('.see--project');
+const popUpCloseIcon = document.querySelector('.pop-up-close-icon');
+const popUpWindow = document.querySelector('#modal');
 
+const openPopUp = () => {
+  popUpWindow.style.display = 'block';
+  body.style = 'overflow: hidden;';
+};
+
+const closePopUp = () => {
+  popUpWindow.style.display = 'none';
+  body.style = '';
+};
+
+popUpCloseIcon.addEventListener('click', closePopUp);
+prDetailsButton.forEach((item) => {
+  item.addEventListener('click', openPopUp);
+});
 closeIcon.addEventListener('click', menuClose);
 hamburger.addEventListener('click', menuOpen);
-navLink.addEventListener('click', menuClose);
