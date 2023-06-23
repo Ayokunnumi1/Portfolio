@@ -390,7 +390,7 @@ const loadWorkSection = (data) => {
     sourceButton.appendChild(sourceBtnTxt);
     const sourceBtnIcon = document.createElement('img');
     sourceBtnIcon.src = 'images/github-icon-png.png';
-    sourceBtnIcon.className = 'github-img'
+    sourceBtnIcon.className = 'github-img';
     sourceButton.appendChild(sourceBtnIcon);
     popUpCloseIcon.addEventListener('click', closePopUp);
   };
