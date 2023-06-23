@@ -9,6 +9,7 @@
 body {
   margin-bottom: 20px;
   background-color: #f7f7f9;
+  position: relative;
 }
 
 a {
@@ -63,6 +64,10 @@ header {
   font-style: normal;
   font-size: 18px;
   color: blue;
+}
+
+.see-container > a {
+  width: 100%;
 }
 
 .nav-link li > a {
@@ -241,6 +246,17 @@ p {
   padding: 10px;
 }
 
+.skill-list li {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  color: #6070ff;
+  background: #ebebff;
+  padding: 7px;
+  border-radius: 5px;
+}
+
 .ul--list li:first-child {
   list-style: none;
   font-weight: 12px;
@@ -255,6 +271,48 @@ p {
   display: flex;
   gap: 2rem;
   padding: 20px 0;
+}
+
+.project-description .experience-list {
+  display: flex;
+  align-items: center;
+  list-style-type: disc;
+  gap: 2rem;
+}
+
+.pop-up .skill-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  list-style-type: disc;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  /* gap: 1rem; */
+  padding-bottom: 20px;
+}
+
+.project-description .skill-list {
+  list-style: none;
+  padding: 10px 0;
+  gap: 0.7rem;
+}
+
+.project-description .experience-list li {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  color: #7a869a;
+}
+
+.project-description .experience-list li:first-child {
+  list-style: none;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  color: #344563;
 }
 
 button {
@@ -307,6 +365,43 @@ h2 {
   width: 100%;
   margin: 3rem auto;
   margin-bottom: 0;
+}
+
+.see-container button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 8px;
+  outline: none;
+  margin: 20px 0;
+  padding: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #7f8cff;
+  color: #6070ff;
+}
+
+.see-container button:active {
+  background: #fff;
+  background: #2230d2;
+  border: 1px solid #7f8cff;
+  color: #396df2;
+  color: #fff;
+}
+
+.see-container button:disabled {
+  background: #fff;
+  color: #5e6c84;
+  border: 1px solid #5e6c84;
+}
+
+.see-container button:hover {
+  background: #6070ff;
+  color: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
 }
 
 .about--section .about--text {
@@ -438,6 +533,81 @@ textarea {
 
 .contact-button {
   margin-top: 20px;
+}
+
+.pop-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 2000;
+  background-color: #c1c7d0b6;
+  padding: 20px;
+
+  /* display: none; */
+}
+
+.show-popup {
+  display: block;
+}
+
+.pop-up .overlay {
+  background: #fff;
+  width: 99%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.overlay .detail-img {
+  width: 100%;
+}
+
+.pop-up .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+.pop-up .head h2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: #091e42;
+  text-transform: capitalize;
+}
+
+.pop-up .pop-up-close-icon {
+  cursor: pointer;
+}
+
+.pop-up .project-description .experience-list {
+  padding-bottom: 20px;
+}
+
+.pop-up .flex-pop {
+  margin-top: 20px;
+}
+
+.pop-up-desc {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #344563;
+  padding-bottom: 10px;
+}
+
+.see-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 @media (min-width: 768px) {
@@ -660,5 +830,25 @@ textarea {
   .contact--paragraph {
     width: 450px;
     margin: auto;
+  }
+
+  .pop-up {
+    width: 100%;
+    padding: 30px;
+  }
+
+  .pop-up .overlay {
+    width: 80%;
+  }
+
+  .overlay .detail-img {
+    width: 100%;
+  }
+
+  .pop-up .flex-pop {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
   }
 }
