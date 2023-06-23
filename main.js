@@ -3,10 +3,10 @@
 const closeIcon = document.querySelector('.close-container');
 const navLink = document.querySelector('.nav-link');
 const hamburger = document.querySelector('.toolbar-hamburger');
-
+const headerSection = document.querySelector('.header-hero-section');
 const body = document.getElementsByTagName('body')[0];
 const workSection = document.querySelector('.work--section');
-
+const toolBarSection = document.querySelector('.toolbar-hamburger');
 
 const menuOpen = () => {
   navLink.classList.remove('hide-link');
