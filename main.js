@@ -78,6 +78,7 @@ const projectsData = [
   },
 ];
 
+// Dynamically create html elements with javascript
 const loadWorkSection = (data) => {
   const card01 = document.createElement('div');
   card01.className = 'parent--container parent--one';
