@@ -5,10 +5,10 @@ const headerSection = document.querySelector('.header-hero-section');
 const toolBarSection = document.querySelector('.toolbar-section > a');
 
 const menuOpen = () => {
+  hamburger.classList.add('blur-hamburger');
   navLink.classList.remove('hide-link');
   headerSection.classList.add('blur-header');
   toolBarSection.classList.add('blur-logo');
-  hamburger.classList.add('blur-hamburger');
 };
 const menuClose = () => {
   navLink.classList.add('hide-link');
