@@ -12,6 +12,8 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
+
+- [🚀 Live Demo](#live-demo)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -19,9 +21,9 @@
 - [📝 License](#license)
 
 
-# 📖 <a name="about-project">Hello Microverse</a>
+# 📖 <a name="about-project">Ayokunnumi Portfolio-Project</a>
 
-This repository contains the source codes of my Microverse Second Project called the "portfolio project". It showcases my skills and expertise in building the navbar and header sections. 
+This repository contains the source codes of my Microverse Second Project called the "portfolio project". It showcases my skills and expertise in building the mobile and desktop version. 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -43,9 +45,8 @@ This repository contains the source codes of my Microverse Second Project called
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
 ## 🚀 Live Demo <a name="live-demo"></a>
-- This is the link (https://ayokunnumi1.github.io/Portfolio-setup-and-mobile-first/)
+- [Live Demo Link](https://ayokunnumi1.github.io/Portfolio-setup-and-mobile-first/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -53,8 +54,6 @@ This repository contains the source codes of my Microverse Second Project called
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
@@ -82,6 +81,10 @@ In order to run this project you need:
 Install this project with:
 After cloning the repository, navigate into the project's directory. If there are any dependencies required for the project, you need to install them. Typically, this involves using a package manager like npm or yarn.
 
+  Run this command;
+```sh
+  npm install
+```
 
 ### Usage
 
@@ -124,7 +127,7 @@ After cloning the repository, navigate into the project's directory. If there ar
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Ayokunnumi1/Portfolio-setup-and-mobile-first/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
  
