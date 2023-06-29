@@ -151,4 +151,4 @@ seeProjectBtns.forEach((btn) => {
       window.scrollTo(0, scrollHeight);
     });
   });
-});
+
