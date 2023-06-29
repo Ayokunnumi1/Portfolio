@@ -229,7 +229,7 @@ function validateMessage() {
   const required = 30;
   const left = required - messages.length;
   if (left > 0) {
-    textErrorMsg.innerText = 'Message is required';
+    textErrorMsg.innerText = 'Message should be 30 characters';
     return false;
   }
   textErrorMsg.style.display = 'none';
