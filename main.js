@@ -59,6 +59,7 @@ links.forEach((link) => {
   });
 });
 
+
 const projectElements = projects.map((project) => (
   `       <article class="project-container">
   <div>
@@ -135,6 +136,20 @@ function showPopUp(btn) {
   </div>
  </div>
 </div>`;
+  
+const menuOpen = () => {
+  hamburger.classList.add('blur-hamburger');
+  navLink.classList.remove('hide-link');
+  headerSection.classList.add('blur-header');
+  toolBarSection.classList.add('blur-logo');
+};
+const menuClose = () => {
+  navLink.classList.add('hide-link');
+  headerSection.classList.remove('blur-header');
+  toolBarSection.classList.remove('blur-logo');
+  hamburger.classList.remove('blur-hamburger');
+};
+
 
   popupSection.insertAdjacentHTML('beforeend', element);
 }

@@ -245,6 +245,7 @@ article {
   gap: 2rem;
 }
 
+
 .pop-up .skill-list {
   list-style: none;
   display: flex;
@@ -276,6 +277,40 @@ article {
   font-weight: 600;
   font-size: 13px;
   color: #7a869a;
+  
+.see--project,
+.get--button {
+  background: #fff;
+  box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+  border-radius: 8px;
+  outline: none;
+  margin: 20px 0;
+  color: #6070ff;
+  padding: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  border: 1px solid #7f8cff;
+}
+
+.see--project:hover,
+.get--button:hover {
+  border: 1px solid #7f8cff;
+  border-radius: 8px;
+  background: #6070ff;
+  color: #fff;
+}
+
+.see--project:disabled,
+.get--button:disabled {
+  color: #5e6c84;
+  background: #ffff;
+  border: 1px solid #7f8cff;
+}
+
+.see--project:focus,
+.get--button:focus {
+  color: #fff;
+  background: #2230d2;
 }
 
 .project-description .experience-list li:first-child {
@@ -622,6 +657,29 @@ form textarea {
 
   .see-break {
     display: none;
+  .see--project,
+  .get--button {
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
+    border-radius: 8px;
+    outline: none;
+    margin: 5px 0;
+    color: #6070ff;
+    padding: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    border: 1px solid #7f8cff;
+  }
+
+  .ul--list {
+    display: flex;
+    gap: 1.5rem;
+    padding: 8px 0;
+  }
+
+  .skill--list {
+    gap: 1rem;
+    padding: 10px 0;
   }
 
   article {
