@@ -4,7 +4,7 @@ const closeIcon = document.querySelector('.close-container');
 const links = document.querySelectorAll('.nav-link > li');
 const headerHeroSection = document.querySelector('.header-hero-section');
 const projectSection = document.querySelector('.project-section');
-// const popupSection = document.querySelector('.pop-up');
+const popupSection = document.querySelector('.pop-up');
 const projects = [
   {
     name: 'tonic',
@@ -58,3 +58,84 @@ links.forEach((link) => {
     headerHeroSection.classList.remove('blur-header-hero-section');
   });
 });
+
+const projectElements = projects.map((project) => (
+  `       <article class="project-container">
+  <div>
+      <a href="">
+          <img src="${project.image}" alt="">
+      </a>
+  </div>
+  <div class="project-description">
+      <h2>${project.name}</h2>
+      <ul class="experience-list">
+          <li>CANOPY</li>
+          <li>Backend Dev</li>
+          <li>2015</li>
+      </ul>
+      <p>${project.description}</p>
+      <ul class="skill-list">
+      ${
+  project.technologies.map((technology) => (
+    `<li>${technology}</li>`
+  )).join('')
+  }
+      </ul>
+      <button id=${project.id}>
+          See Project
+      </button>
+  </div>
+</article>`
+)).join('');
+projectSection.insertAdjacentHTML('beforeend', projectElements);
+const seeProjectBtns = projectSection.querySelectorAll('.project-description button');
+function showPopUp(btn) {
+  const objElement = projects.find((project) => project.id === btn.id);
+  const element = ` <div class="overlay">
+  <div class="head">
+      <h2>${objElement.name}</h2>
+      <img src="images/pop-up-close-icon.png" class="pop-up-close-icon" alt="">
+  </div>
+ <div class="project-description">
+      <ul class="experience-list">
+          <li>CANOPY</li>
+          <li>Backend Dev</li>
+          <li>2015</li>
+      </ul>
+      <img class="detail-img" src=${objElement.image} alt="">
+ </div>
+ <div class="flex-pop">
+  <div class="pop-up-desc">
+      <p>
+        ${objElement.description}
+      </p>
+  </div>
+  <div class="side-pop">
+      <ul class="skill-list">
+      ${
+  objElement.technologies.map((technology) => (
+    `<li>${technology}</li>`
+  )).join('')
+}
+      </ul>
+      <div class="see-container">
+        <a href=${objElement.liveLink}>
+          <button>
+            <span>see live</span>
+            <img src="images/see-live-icon.png" alt="">
+          </button>
+        </a>
+      <a href=${objElement.sourceLink}>
+        <button>
+          <span>see source</span>
+          <img src="images/see-source-icon.png" alt="">
+        </button>
+      </a>
+    </div>
+  </div>
+ </div>
+</div>`;
+
+
+  popupSection.insertAdjacentHTML('beforeend', element);
+}
