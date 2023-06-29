@@ -153,7 +153,6 @@ seeProjectBtns.forEach((btn) => {
   });
 });
 
-
 // //Contact Form Validation
 // const names = document.getElementById('fullName');
 // const email = document.getElementById('email-address');
@@ -197,25 +196,52 @@ seeProjectBtns.forEach((btn) => {
 // contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
+const textErrorMsg = document.getElementById('text-error-msg');
+const buttonErrorMsg = document.getElementById('submitErrorButton');
 
 // eslint-disable-next-line consistent-return, no-unused-vars
 function validateName() {
   const name = document.getElementById('fullName').value;
-  if (name === '' || name == null) {
+  if (name.length === 0) {
     nameErrorMsg.innerText = 'Name is required';
     return false;
   }
+  nameErrorMsg.style.display = 'none';
 }
 // eslint-disable-next-line consistent-return, no-unused-vars
 function validateEmail() {
   const email = document.getElementById('email-address').value;
-  if (email === '' || email == null) {
+  if (email.length === 0) {
     emailErrorMsg.innerText = 'Email is required';
     return false;
   }
 
   if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
     emailErrorMsg.innerText = 'Invalid Email';
+    return false;
+  }
+  emailErrorMsg.style.display = 'none';
+}
+
+// eslint-disable-next-line consistent-return, no-unused-vars
+function validateMessage() {
+  const messages = document.getElementById('text-msg').value;
+  const required = 30;
+  const left = required - messages.length;
+  if (left > 0) {
+    textErrorMsg.innerText = 'Message is required';
+    return false;
+  }
+  textErrorMsg.style.display = 'none';
+}
+
+// eslint-disable-next-line consistent-return, no-unused-vars
+function validateButton() {
+  if (!validateName() || !validateEmail() || !validateMessage()) {
+    // eslint-disable-next-line no-undef
+    buttonErrorMsg.style.display = 'block';
+    setTimeout(() => { buttonErrorMsg.style.display = 'none'; }, 3000);
+    buttonErrorMsg.innerHTML = 'kindly fill the form';
     return false;
   }
 }
