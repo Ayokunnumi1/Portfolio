@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayokunnumi's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/all.css">
+    <!-- <link rel="stylesheet" href="css/all.css"> -->
 </head>
 <body>
     <header>
@@ -153,12 +153,18 @@
                 developing, a feature that you need built or a 
                 project that needs coding. I’d love to help with it!
             </p>
+            
             <form id="contact-form" action="https://formspree.io/f/xgebjlno" method="post">
-                <input type="text" name="fullName" id="fullName" placeholder="Enter Your Fullname" maxlength="30" required>
-                <input type="email" name="email" id="email-address" placeholder="Email" required>
+                <div class="contact-input">
+                    <input type="text" name="fullName" id="fullName" placeholder="Enter Your Fullname" maxlength="30" required onkeyup="validateName()">
+                    <span id="name-error-msg" class="error-msg"></span>
+                </div>
+                    <div class="contact-input">
+                        <input type="email" name="email" id="email-address" placeholder="Email" required onkeyup="validateEmail()">
+                        <span id="email-error-msg" class="error-msg"></span>
+                    </div>
                 <textarea name="message" placeholder="Write your message here..." maxlength="500" required></textarea>
-                <button type="submit" class="contact-btn">Get in touch</button>
-                <div id="error-message"></div>
+                <button type="submit" class="contact-btn" id="contact-btn">Get in touch</button>
             </form>
         </section>
         <!-- form-section-end -->

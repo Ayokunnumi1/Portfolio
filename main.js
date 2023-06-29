@@ -154,20 +154,68 @@ seeProjectBtns.forEach((btn) => {
 });
 
 
-// Contact Form Validation
-const name = document.getElementById('fullName');
-const email = document.getElementById('email-address');
-const form = document.getElementById('contact-form');
-const errorElement = document.getElementById('error-message');
+// //Contact Form Validation
+// const names = document.getElementById('fullName');
+// const email = document.getElementById('email-address');
+// const form = document.getElementById('contact-form');
+// const errorElement = document.getElementById('error-message');
 
-form.addEventListener('submit', (e) => {
-  if (name.value === '' || name.value == null) {
-    e.preventDefault();
-    errorElement.innerText = 'Please enter your name';
-  } else if (email.value === '' || email.value == null) {
-    e.preventDefault();
-    errorElement.innerText = 'Please enter email';
-  } else if (email.value === email.value.toUpperCase()) {
-    e.preventDefault();
+// form.addEventListener('submit', (e) => {
+//   let errorMessages = '';
+//   if (names.value === '' || names.value == null) {
+//     errorMessages.push('Name is required');
+//   }
+
+//   // if (email.value === '' || email.value == null) {
+//   //   // e.preventDefault();
+//   //   messages.push('Please enter email');
+//   // }
+//   if (email.value === email.value.toUpperCase()) {
+//     e.preventDefault();
+//     errorElement.innerText = errorMessages.join(',');
+//   }
+//   console.log(errorMessages);
+// });
+
+// // contact form validation
+// const contactForm = document.getElementById('contact-form');
+// const contactButton = document.getElementById('contact-btn');
+// const email = document.getElementById('email-address');
+// const emailInput = email.value;
+
+// contactForm.addEventListener('submit', () => {
+//   const messages = '';
+//   // eslint-disable-next-line no-plusplus
+//   for (let i = 0; i < emailInput.length; i++) {
+//     if (emailInput[i] === emailInput[i].toUpperCase()) {
+//       messages.push('kindly input a valid email');
+//     }
+//     console.log(messages);
+//   }
+// });
+
+// contact-form-validation
+const nameErrorMsg = document.getElementById('name-error-msg');
+const emailErrorMsg = document.getElementById('email-error-msg');
+
+// eslint-disable-next-line consistent-return, no-unused-vars
+function validateName() {
+  const name = document.getElementById('fullName').value;
+  if (name === '' || name == null) {
+    nameErrorMsg.innerText = 'Name is required';
+    return false;
   }
-});
+}
+// eslint-disable-next-line consistent-return, no-unused-vars
+function validateEmail() {
+  const email = document.getElementById('email-address').value;
+  if (email === '' || email == null) {
+    emailErrorMsg.innerText = 'Email is required';
+    return false;
+  }
+
+  if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+    emailErrorMsg.innerText = 'Invalid Email';
+    return false;
+  }
+}

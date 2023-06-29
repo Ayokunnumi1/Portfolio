@@ -482,6 +482,18 @@ form input {
   outline: none;
 }
 
+.contact-input {
+  width: 100%;
+  padding: 0;
+}
+
+.error-msg {
+  color: red;
+  font-family: 'Poppins', sans-serif;
+  font-size: large;
+  font-style: oblique;
+}
+
 form textarea {
   height: 170px;
   width: 100%;
