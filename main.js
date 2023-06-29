@@ -12,7 +12,7 @@ const projects = [
     image: 'images/tonic.png',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
-    sourceLink: 'https://www.github.com/Akorede3133/portfolio',
+    sourceLink: 'https://github.com/Ayokunnumi1',
     id: 'tonic',
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     image: 'images/multi-stories.png',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
-    sourceLink: 'https://www.github.com/Akorede3133/portfolio',
+    sourceLink: 'https://github.com/Ayokunnumi1',
     id: 'stories',
   },
   {
@@ -30,7 +30,7 @@ const projects = [
     image: 'images/facebook360.png',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
-    sourceLink: 'https://www.github.com/Akorede3133/portfolio',
+    sourceLink: 'https://github.com/Ayokunnumi1',
     id: 'facebook',
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     image: 'images/uber.png',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
-    sourceLink: 'https://www.github.com/Akorede3133/portfolio',
+    sourceLink: 'https://github.com/Ayokunnumi1',
     id: 'uber',
   },
 ];
@@ -56,98 +56,5 @@ links.forEach((link) => {
   link.addEventListener('click', () => {
     navLink.classList.remove('show-link');
     headerHeroSection.classList.remove('blur-header-hero-section');
-  });
-});
-
-const projectElements = projects.map((project) => (
-  `       <article class="project-container">
-  <div>
-      <a href="">
-          <img src="${project.image}" alt="">
-      </a>
-  </div>
-  <div class="project-description">
-      <h2>${project.name}</h2>
-      <ul class="experience-list">
-          <li>CANOPY</li>
-          <li>Backend Dev</li>
-          <li>2015</li>
-      </ul>
-      <p>${project.description}</p>
-      <ul class="skill-list">
-      ${
-  project.technologies.map((technology) => (
-    `<li>${technology}</li>`
-  )).join('')
-  }
-      </ul>
-      <button id=${project.id}>
-          See Project
-      </button>
-  </div>
-</article>`
-)).join('');
-projectSection.insertAdjacentHTML('beforeend', projectElements);
-const seeProjectBtns = projectSection.querySelectorAll('.project-description button');
-function showPopUp(btn) {
-  const objElement = projects.find((project) => project.id === btn.id);
-  const element = ` <div class="overlay">
-  <div class="head">
-      <h2>${objElement.name}</h2>
-      <img src="images/pop-up-close-icon.png" class="pop-up-close-icon" alt="">
-  </div>
- <div class="project-description">
-      <ul class="experience-list">
-          <li>CANOPY</li>
-          <li>Backend Dev</li>
-          <li>2015</li>
-      </ul>
-      <img class="detail-img" src=${objElement.image} alt="">
- </div>
- <div class="flex-pop">
-  <div class="pop-up-desc">
-      <p>
-        ${objElement.description}
-      </p>
-  </div>
-  <div class="side-pop">
-      <ul class="skill-list">
-      ${
-  objElement.technologies.map((technology) => (
-    `<li>${technology}</li>`
-  )).join('')
-}
-      </ul>
-      <div class="see-container">
-        <a href=${objElement.liveLink}>
-          <button>
-            <span>see live</span>
-            <img src="images/see-live-icon.png" alt="">
-          </button>
-        </a>
-      <a href=${objElement.sourceLink}>
-        <button>
-          <span>see source</span>
-          <img src="images/see-source-icon.png" alt="">
-        </button>
-      </a>
-    </div>
-  </div>
- </div>
-</div>`;
-  popupSection.insertAdjacentHTML('beforeend', element);
-}
-seeProjectBtns.forEach((btn) => {
-  btn.addEventListener('click', () => {
-    showPopUp(btn);
-    popupSection.classList.add('show-popup');
-    window.scrollTo(0, 0);
-    const closePopBtn = popupSection.querySelector('.pop-up-close-icon');
-    const scrollHeight = window.scrollY;
-    closePopBtn.addEventListener('click', () => {
-      popupSection.classList.remove('show-popup');
-      popupSection.innerHTML = '';
-      window.scrollTo(0, scrollHeight);
-    });
   });
 });
