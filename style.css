@@ -207,7 +207,8 @@ h1 {
   color: #344563;
 }
 
-.see--project {
+.see--project,
+.contact-button {
   background: #fff;
   box-shadow: 0 8px 16px rgba(64, 83, 252, 0.24);
   border-radius: 8px;
@@ -220,20 +221,27 @@ h1 {
   border: 1px solid #7f8cff;
 }
 
-.see--project:hover {
+.contact-button {
+  margin-top: 20px;
+}
+
+.see--project:hover,
+.contact-button:hover {
   border: 1px solid #7f8cff;
   border-radius: 8px;
   background: #6070ff;
   color: #fff;
 }
 
-.see--project:disabled {
+.see--project:disabled,
+.contact-button:disabled {
   color: #5e6c84;
   background: #ffff;
   border: 1px solid #7f8cff;
 }
 
-.see--project:focus {
+.see--project:focus,
+.contact-button:focus {
   color: #fff;
   background: #2230d2;
 }
@@ -479,9 +487,16 @@ h2 {
   width: 30px;
 }
 
-.contact--form {
+#contact--form {
   padding: 1rem;
+  border: 3px solid red;
 }
+
+/*
+.error {
+  color: red;
+  margin-top: 5px;
+} */
 
 .contact--section {
   display: flex;
@@ -547,10 +562,6 @@ textarea {
   width: 100%;
   border: none;
   outline: none;
-}
-
-.contact-button {
-  margin-top: 20px;
 }
 
 .pop-up {

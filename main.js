@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable prefer-destructuring */
 /* Mobile Menu */
 const closeIcon = document.querySelector('.close-container');
@@ -425,9 +426,25 @@ const closePopUp = () => {
   body.style = '';
 };
 
-popUpCloseIcon.addEventListener('click', closePopUp);
+// popUpCloseIcon.addEventListener('click', closePopUp);
 prDetailsButton.forEach((item) => {
   item.addEventListener('click', openPopUp);
 });
 closeIcon.addEventListener('click', menuClose);
 hamburger.addEventListener('click', menuOpen);
+
+// validate contact Form section
+const contactForm = document.getElementById('contact--form');
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const contactButton = document.getElementById('button');
+  const email = document.getElementById('email');
+  const emailInput = email.value;
+  for (let i = 0; i < emailInput.length; i++) {
+    if (emailInput[i] === emailInput[i].toUpperCase()) {
+      console.log('kindly input a valid email address');
+    }
+
+    // contactButton.submit();
+  }
+});
