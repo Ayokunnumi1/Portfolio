@@ -153,20 +153,21 @@ seeProjectBtns.forEach((btn) => {
   });
 });
 
-// validate contact Form section
-const contactForm = document.getElementById('contact--form');
-contactForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const contactButton = document.getElementById('button');
-  const email = document.getElementById('email');
-  const emailInput = email.value;
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < emailInput.length; i++) {
-    if (emailInput[i] === emailInput[i].toUpperCase()) {
-      console.log('kindly input a valid email address');
-    }
 
-    // contactButton.submit();
+// Contact Form Validation
+const name = document.getElementById('fullName');
+const email = document.getElementById('email-address');
+const form = document.getElementById('contact-form');
+const errorElement = document.getElementById('error-message');
+
+form.addEventListener('submit', (e) => {
+  if (name.value === '' || name.value == null) {
+    e.preventDefault();
+    errorElement.innerText = 'Please enter your name';
+  } else if (email.value === '' || email.value == null) {
+    e.preventDefault();
+    errorElement.innerText = 'Please enter email';
+  } else if (email.value === email.value.toUpperCase()) {
+    e.preventDefault();
   }
 });
-
