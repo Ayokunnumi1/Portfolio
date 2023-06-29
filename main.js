@@ -4,7 +4,7 @@ const closeIcon = document.querySelector('.close-container');
 const links = document.querySelectorAll('.nav-link > li');
 const headerHeroSection = document.querySelector('.header-hero-section');
 const projectSection = document.querySelector('.project-section');
-const popupSection = document.querySelector('.pop-up');
+// const popupSection = document.querySelector('.pop-up');
 const projects = [
   {
     name: 'tonic',
