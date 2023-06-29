@@ -136,7 +136,6 @@ function showPopUp(btn) {
  </div>
 </div>`;
 
-
   popupSection.insertAdjacentHTML('beforeend', element);
 }
 seeProjectBtns.forEach((btn) => {
