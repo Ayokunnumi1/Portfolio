@@ -9,7 +9,7 @@ const projects = [
   {
     name: 'tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/tonic.png',
+    image: 'images/nature.svg',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -18,7 +18,7 @@ const projects = [
   {
     name: 'multi-Post stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-    image: 'images/multi-stories.png',
+    image: 'images/profissionalArt.svg',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -27,7 +27,7 @@ const projects = [
   {
     name: 'facebook 360',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/facebook360.png',
+    image: 'images/facebook.svg',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -36,7 +36,7 @@ const projects = [
   {
     name: 'uber navigation',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    image: 'images/uber.png',
+    image: 'images/uber.svg',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
