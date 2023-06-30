@@ -9,7 +9,7 @@ const projects = [
   {
     name: 'tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/nature.svg',
+    image: 'images/tonic.png',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -18,7 +18,7 @@ const projects = [
   {
     name: 'multi-Post stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-    image: 'images/profissionalArt.svg',
+    image: 'images/multi-stories.png',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -27,7 +27,7 @@ const projects = [
   {
     name: 'facebook 360',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/facebook.svg',
+    image: 'images/facebook360.png',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -36,7 +36,7 @@ const projects = [
   {
     name: 'uber navigation',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    image: 'images/uber.svg',
+    image: 'images/uber.png',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -152,3 +152,77 @@ seeProjectBtns.forEach((btn) => {
     });
   });
 });
+
+const nameErrorMsg = document.getElementById('name-error-msg');
+const emailErrorMsg = document.getElementById('email-error-msg');
+const textErrorMsg = document.getElementById('text-error-msg');
+const buttonErrorMsg = document.getElementById('submitErrorButton');
+
+function validateName() {
+  const name = document.getElementById('fullName').value;
+  if (name.length === 0) {
+    nameErrorMsg.innerHTML = 'Name is required';
+    return false;
+  }
+  nameErrorMsg.style.display = 'none';
+  return true;
+}
+
+function validateEmail() {
+  const email = document.getElementById('email-address').value;
+  if (email.length === 0) {
+    emailErrorMsg.innerHTML = 'Email is required';
+    return false;
+  }
+
+  if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+    emailErrorMsg.innerHTML = 'Invalid Email';
+    return false;
+  }
+  emailErrorMsg.style.display = 'none';
+  return true;
+}
+
+const email = document.getElementById('email-address');
+email.addEventListener('input', (event) => {
+  const text = event.target.value;
+  if (text !== text.toLowerCase()) {
+    email.setCustomValidity('Please write email in LowerCase');
+  } else {
+    email.setCustomValidity('');
+  }
+});
+
+function validateMessage() {
+  const messages = document.getElementById('text-msg').value;
+  const required = 30;
+  const left = required - messages.length;
+  if (left > 0 && left < 30) {
+    textErrorMsg.innerHTML = `${left} characters left`;
+    return false;
+  }
+
+  if (messages.length === required) {
+    textErrorMsg.innerText = 'Message Complete';
+    textErrorMsg.style.display = 'block';
+  }
+  return true;
+}
+
+const buttonClick = document.getElementById('contact-btn');
+
+// eslint-disable-next-line consistent-return
+function validateButton(event) {
+  if (!validateName() && !validateEmail() && !validateMessage()) {
+    buttonErrorMsg.style.display = 'block';
+    setTimeout(() => { buttonErrorMsg.style.display = 'none'; }, 3000);
+    buttonErrorMsg.innerHTML = 'Invalid form registration';
+    event.preventDefault();
+    return false;
+  }
+  if (validateName() || !validateEmail() || !validateMessage() === true) {
+    buttonClick.submit();
+  }
+}
+
+buttonClick.addEventListener('submit', validateButton);
