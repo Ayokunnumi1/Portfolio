@@ -108,6 +108,9 @@ After cloning the repository, navigate into the project's directory. If there ar
 - GitHub: [@Uzair-Manzoor] https://github.com/Uzair-Manzoor
 - Twitter: [@UzairKiyani5555] https://twitter.com/UzairKiyani5555
 
+👤**GracianoHenrique**
+- GitHub: [@chudisoft] https://github.com/Graciano1997
+
 👤**chudisoft**
 - GitHub: [@chudisoft] https://github.com/chudisoft
 
