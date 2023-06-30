@@ -232,6 +232,8 @@ buttonClick.addEventListener('submit', validateButton);
 // Retrieve the form element and input element
 const form = document.getElementById('contact-form');
 const input = document.getElementById('fullName');
+const localEmail = document.getElementById('email-address');
+const text = document.getElementById('text-msg');
 
 // Add an event listener to the form submission
 form.addEventListener('submit', (e) => {
@@ -239,6 +241,8 @@ form.addEventListener('submit', (e) => {
 
   // Store the input value in localStorage
   localStorage.setItem('myInputValue', input.value);
+  localStorage.setItem('myEmailValue', localEmail.value);
+  localStorage.setItem('myTextValue', text.value);
 
   // Reset the form
   form.reset();
@@ -248,5 +252,6 @@ form.addEventListener('submit', (e) => {
 if (localStorage.getItem('myInputValue')) {
   // Set the input value from localStorage
   input.value = localStorage.getItem('myInputValue');
-  // console.log(input.value);
+  localEmail.value = localStorage.getItem('myEmailValue');
+  text.value = localStorage.getItem('myTextValue');
 }
