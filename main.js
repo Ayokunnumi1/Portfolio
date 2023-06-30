@@ -9,7 +9,7 @@ const projects = [
   {
     name: 'tonic',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/tonic.png',
+    image: 'images/nature.svg',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -18,7 +18,7 @@ const projects = [
   {
     name: 'multi-Post stories',
     description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-    image: 'images/multi-stories.png',
+    image: 'images/profissionalArt.svg',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -27,7 +27,7 @@ const projects = [
   {
     name: 'facebook 360',
     description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/facebook360.png',
+    image: 'images/facebook.svg',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -36,7 +36,7 @@ const projects = [
   {
     name: 'uber navigation',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    image: 'images/uber.png',
+    image: 'images/uber.svg',
     technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
     liveLink: 'https://www.google.com',
     sourceLink: 'https://github.com/Ayokunnumi1',
@@ -151,13 +151,13 @@ seeProjectBtns.forEach((btn) => {
       window.scrollTo(0, scrollHeight);
     });
   });
-});
-
+// Start of contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
 const textErrorMsg = document.getElementById('text-error-msg');
 const buttonErrorMsg = document.getElementById('submitErrorButton');
 
+// eslint-disable-next-line consistent-return, no-unused-vars
 function validateName() {
   const name = document.getElementById('fullName').value;
   if (name.length === 0) {
@@ -167,7 +167,7 @@ function validateName() {
   nameErrorMsg.style.display = 'none';
   return true;
 }
-
+// eslint-disable-next-line consistent-return, no-unused-vars
 function validateEmail() {
   const email = document.getElementById('email-address').value;
   if (email.length === 0) {
@@ -193,6 +193,7 @@ email.addEventListener('input', (event) => {
   }
 });
 
+// eslint-disable-next-line consistent-return, no-unused-vars
 function validateMessage() {
   const messages = document.getElementById('text-msg').value;
   const required = 30;
@@ -209,10 +210,13 @@ function validateMessage() {
   return true;
 }
 
+// eslint-disable-next-line consistent-return, no-unused-vars
 const buttonClick = document.getElementById('contact-btn');
 
+// eslint-disable-next-line consistent-return, no-unused-vars
 function validateButton(event) {
   if (!validateName() && !validateEmail() && !validateMessage()) {
+    // eslint-disable-next-line no-undef
     buttonErrorMsg.style.display = 'block';
     setTimeout(() => { buttonErrorMsg.style.display = 'none'; }, 3000);
     buttonErrorMsg.innerHTML = 'Invalid form registration';
