@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayokunnumi's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="css/all.css"> -->
 </head>
 
 <body>
@@ -67,11 +66,8 @@
         </div>
     </header>
     <main>
-        <!-- projeect-section-start -->
         <section class="project-section" id="portfolio">
         </section>
-        <!-- project-section-end -->
-        <!-- about-section-start -->
         <section class="about-section" id="about">
             <div>
                 <h3>About Myself</h3>
@@ -147,8 +143,7 @@
                 </div>
             </div>
         </section>
-        <!-- about-section end -->
-        <!-- form-section start -->
+
         <section class="form-section" id="contact">
             <h2>Contact me</h2>
             <p>
@@ -164,26 +159,24 @@
                     <span id="name-error-msg" class="error-msg"></span>
                 </div>
                 <div class="contact-input">
-                    <input type="email" name="email" id="email-address" placeholder="Email"
-                      required  onkeyup="validateEmail()">
+                    <input type="email" name="email" id="email-address" placeholder="Email" required
+                        onkeyup="validateEmail()">
                     <span id="email-error-msg" class="error-msg"></span>
                 </div>
                 <div class="contact-input">
-                    <textarea name="message" placeholder="Write your message here..." maxlength="500" 
-                      required  id="text-msg" onkeyup="validateMessage()"></textarea>
-                        <span id="text-error-msg" class="error-msg"></span>
+                    <textarea name="message" placeholder="Write your message here..." maxlength="500" required
+                        id="text-msg" onkeyup="validateMessage()"></textarea>
+                    <span id="text-error-msg" class="error-msg"></span>
                 </div>
                 <div>
-                    <button onclick="return validateButton()"  type="submit" class="contact-btn" id="contact-btn">Get in touch</button>
+                    <button onclick="return validateButton()" type="submit" class="contact-btn" id="contact-btn">Get in
+                        touch</button>
                     <span id="submitErrorButton" class="error-msg"></span>
                 </div>
             </form>
         </section>
-        <!-- form-section-end -->
-        <!-- popup-section-start -->
         <section class="pop-up">
         </section>
-        <!-- popup-section-end -->
     </main>
     <script src="main.js"></script>
 </body>

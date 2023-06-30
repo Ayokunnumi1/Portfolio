@@ -153,13 +153,11 @@ seeProjectBtns.forEach((btn) => {
   });
 });
 
-// contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
 const textErrorMsg = document.getElementById('text-error-msg');
 const buttonErrorMsg = document.getElementById('submitErrorButton');
 
-// eslint-disable-next-line consistent-return, no-unused-vars
 function validateName() {
   const name = document.getElementById('fullName').value;
   if (name.length === 0) {
@@ -169,7 +167,7 @@ function validateName() {
   nameErrorMsg.style.display = 'none';
   return true;
 }
-// eslint-disable-next-line consistent-return, no-unused-vars
+
 function validateEmail() {
   const email = document.getElementById('email-address').value;
   if (email.length === 0) {
@@ -195,7 +193,6 @@ email.addEventListener('input', (event) => {
   }
 });
 
-// eslint-disable-next-line consistent-return, no-unused-vars
 function validateMessage() {
   const messages = document.getElementById('text-msg').value;
   const required = 30;
@@ -212,13 +209,10 @@ function validateMessage() {
   return true;
 }
 
-// eslint-disable-next-line consistent-return, no-unused-vars
 const buttonClick = document.getElementById('contact-btn');
 
-// eslint-disable-next-line consistent-return, no-unused-vars
 function validateButton(event) {
   if (!validateName() && !validateEmail() && !validateMessage()) {
-    // eslint-disable-next-line no-undef
     buttonErrorMsg.style.display = 'block';
     setTimeout(() => { buttonErrorMsg.style.display = 'none'; }, 3000);
     buttonErrorMsg.innerHTML = 'Invalid form registration';
