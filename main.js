@@ -153,46 +153,6 @@ seeProjectBtns.forEach((btn) => {
   });
 });
 
-// //Contact Form Validation
-// const names = document.getElementById('fullName');
-// const email = document.getElementById('email-address');
-// const form = document.getElementById('contact-form');
-// const errorElement = document.getElementById('error-message');
-
-// form.addEventListener('submit', (e) => {
-//   let errorMessages = '';
-//   if (names.value === '' || names.value == null) {
-//     errorMessages.push('Name is required');
-//   }
-
-//   // if (email.value === '' || email.value == null) {
-//   //   // e.preventDefault();
-//   //   messages.push('Please enter email');
-//   // }
-//   if (email.value === email.value.toUpperCase()) {
-//     e.preventDefault();
-//     errorElement.innerText = errorMessages.join(',');
-//   }
-//   console.log(errorMessages);
-// });
-
-// // contact form validation
-// const contactForm = document.getElementById('contact-form');
-// const contactButton = document.getElementById('contact-btn');
-// const email = document.getElementById('email-address');
-// const emailInput = email.value;
-
-// contactForm.addEventListener('submit', () => {
-//   const messages = '';
-//   // eslint-disable-next-line no-plusplus
-//   for (let i = 0; i < emailInput.length; i++) {
-//     if (emailInput[i] === emailInput[i].toUpperCase()) {
-//       messages.push('kindly input a valid email');
-//     }
-//     console.log(messages);
-//   }
-// });
-
 // contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
@@ -203,45 +163,71 @@ const buttonErrorMsg = document.getElementById('submitErrorButton');
 function validateName() {
   const name = document.getElementById('fullName').value;
   if (name.length === 0) {
-    nameErrorMsg.innerText = 'Name is required';
+    nameErrorMsg.innerHTML = 'Name is required';
     return false;
   }
   nameErrorMsg.style.display = 'none';
+  return true;
 }
 // eslint-disable-next-line consistent-return, no-unused-vars
 function validateEmail() {
   const email = document.getElementById('email-address').value;
   if (email.length === 0) {
-    emailErrorMsg.innerText = 'Email is required';
+    emailErrorMsg.innerHTML = 'Email is required';
     return false;
   }
 
   if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
-    emailErrorMsg.innerText = 'Invalid Email';
+    emailErrorMsg.innerHTML = 'Invalid Email';
     return false;
   }
   emailErrorMsg.style.display = 'none';
+  return true;
 }
+
+const email = document.getElementById('email-address');
+email.addEventListener('input', (event) => {
+  const text = event.target.value;
+  if (text !== text.toLowerCase()) {
+    email.setCustomValidity('Please write email in LowerCase');
+  } else {
+    email.setCustomValidity('');
+  }
+});
 
 // eslint-disable-next-line consistent-return, no-unused-vars
 function validateMessage() {
   const messages = document.getElementById('text-msg').value;
   const required = 30;
   const left = required - messages.length;
-  if (left > 0) {
-    textErrorMsg.innerText = 'Message should be 30 characters';
+  if (left > 0 && left < 30) {
+    textErrorMsg.innerHTML = `${left} characters left`;
     return false;
   }
-  textErrorMsg.style.display = 'none';
+
+  if (messages.length === required) {
+    textErrorMsg.innerText = 'Message Complete';
+    textErrorMsg.style.display = 'block';
+  }
+  return true;
 }
 
 // eslint-disable-next-line consistent-return, no-unused-vars
-function validateButton() {
-  if (!validateName() || !validateEmail() || !validateMessage()) {
+const buttonClick = document.getElementById('contact-btn');
+
+// eslint-disable-next-line consistent-return, no-unused-vars
+function validateButton(event) {
+  if (!validateName() && !validateEmail() && !validateMessage()) {
     // eslint-disable-next-line no-undef
     buttonErrorMsg.style.display = 'block';
     setTimeout(() => { buttonErrorMsg.style.display = 'none'; }, 3000);
-    buttonErrorMsg.innerHTML = 'kindly fill the form';
+    buttonErrorMsg.innerHTML = 'Invalid form registration';
+    event.preventDefault();
     return false;
   }
+  if (validateName() || !validateEmail() || !validateMessage() === true) {
+    buttonClick.submit();
+  }
 }
+
+buttonClick.addEventListener('submit', validateButton);
