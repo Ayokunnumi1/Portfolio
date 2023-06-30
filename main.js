@@ -152,7 +152,7 @@ seeProjectBtns.forEach((btn) => {
     });
   });
 });
-
+// start-contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
 const textErrorMsg = document.getElementById('text-error-msg');
@@ -226,3 +226,27 @@ function validateButton(event) {
 }
 
 buttonClick.addEventListener('submit', validateButton);
+// end-contact-form-validation
+
+// start-local-storage-functionality
+// Retrieve the form element and input element
+const form = document.getElementById('contact-form');
+const input = document.getElementById('fullName');
+
+// Add an event listener to the form submission
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // Prevent form submission
+
+  // Store the input value in localStorage
+  localStorage.setItem('myInputValue', input.value);
+
+  // Reset the form
+  form.reset();
+});
+
+// Check if the input value is stored in localStorage
+if (localStorage.getItem('myInputValue')) {
+  // Set the input value from localStorage
+  input.value = localStorage.getItem('myInputValue');
+  // console.log(input.value);
+}
