@@ -211,6 +211,7 @@ function validateMessage() {
 
 const buttonClick = document.getElementById('contact-btn');
 
+// eslint-disable-next-line consistent-return
 function validateButton(event) {
   if (!validateName() && !validateEmail() && !validateMessage()) {
     buttonErrorMsg.style.display = 'block';
