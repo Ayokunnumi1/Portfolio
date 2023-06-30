@@ -229,29 +229,24 @@ buttonClick.addEventListener('submit', validateButton);
 // end-contact-form-validation
 
 // start-local-storage-functionality
-// Retrieve the form element and input element
 const form = document.getElementById('contact-form');
 const input = document.getElementById('fullName');
 const localEmail = document.getElementById('email-address');
 const text = document.getElementById('text-msg');
 
-// Add an event listener to the form submission
 form.addEventListener('submit', (e) => {
-  e.preventDefault(); // Prevent form submission
+  e.preventDefault();
 
-  // Store the input value in localStorage
   localStorage.setItem('myInputValue', input.value);
   localStorage.setItem('myEmailValue', localEmail.value);
   localStorage.setItem('myTextValue', text.value);
 
-  // Reset the form
   form.reset();
 });
 
-// Check if the input value is stored in localStorage
 if (localStorage.getItem('myInputValue')) {
-  // Set the input value from localStorage
   input.value = localStorage.getItem('myInputValue');
   localEmail.value = localStorage.getItem('myEmailValue');
   text.value = localStorage.getItem('myTextValue');
 }
+// End-local-storage-functionality
