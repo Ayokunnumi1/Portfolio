@@ -152,7 +152,7 @@ seeProjectBtns.forEach((btn) => {
     });
   });
 });
-
+// start-contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
 const textErrorMsg = document.getElementById('text-error-msg');
@@ -226,3 +226,27 @@ function validateButton(event) {
 }
 
 buttonClick.addEventListener('submit', validateButton);
+// end-contact-form-validation
+
+// start-local-storage-functionality
+const form = document.getElementById('contact-form');
+const input = document.getElementById('fullName');
+const localEmail = document.getElementById('email-address');
+const text = document.getElementById('text-msg');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  localStorage.setItem('myInputValue', input.value);
+  localStorage.setItem('myEmailValue', localEmail.value);
+  localStorage.setItem('myTextValue', text.value);
+
+  form.reset();
+});
+
+if (localStorage.getItem('myInputValue')) {
+  input.value = localStorage.getItem('myInputValue');
+  localEmail.value = localStorage.getItem('myEmailValue');
+  text.value = localStorage.getItem('myTextValue');
+}
+// End-local-storage-functionality
