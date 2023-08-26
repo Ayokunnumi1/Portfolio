@@ -7,39 +7,39 @@ const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
 const projects = [
   {
-    name: 'tonic',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/tonic.png',
+    name: 'To Do List Website',
+    description: 'To-do list" is a tool that helps to organize your day',
+    image: 'images/To-do-list.png',
     technologies: ['HTML', 'CSS', 'javascript'],
-    liveLink: 'https://www.google.com',
-    sourceLink: 'https://github.com/Ayokunnumi1',
+    liveLink: 'https://ayokunnumi1.github.io/To-Do-List-App/dist/',
+    sourceLink: 'https://github.com/Ayokunnumi1/To-Do-List-App',
     id: 'tonic',
   },
   {
-    name: 'multi-Post stories',
-    description: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
-    image: 'images/multi-stories.png',
-    technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
-    liveLink: 'https://www.google.com',
-    sourceLink: 'https://github.com/Ayokunnumi1',
+    name: 'Awesome Books Library',
+    description: 'It showcases my skills and expertise in creating Objects with Classes and using Add Event Listeners.',
+    image: 'images/Awesome-books.png',
+    technologies: ['HTML', 'CSS', 'javascript'],
+    liveLink: 'https://ayokunnumi1.github.io/Awesome-Books/',
+    sourceLink: 'git@github.com:Ayokunnumi1/Awesome-Books.git',
     id: 'stories',
   },
   {
-    name: 'facebook 360',
-    description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
-    image: 'images/facebook360.png',
+    name: 'Conference Page',
+    description: 'This repository contains the source codes for a Conference Page built for Content creators',
+    image: 'images/conference-page.png',
     technologies: ['HTML', 'CSS', 'javascript'],
-    liveLink: 'https://www.google.com',
-    sourceLink: 'https://github.com/Ayokunnumi1',
+    liveLink: 'https://ayokunnumi1.github.io/Conference-Page/',
+    sourceLink: 'git@github.com:Ayokunnumi1/Conference-Page.git',
     id: 'facebook',
   },
   {
-    name: 'uber navigation',
+    name: 'Rock Paper Scissors',
     description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    image: 'images/uber.png',
-    technologies: ['HTML', 'Ruby on rails', 'CSS', 'javascript'],
-    liveLink: 'https://www.google.com',
-    sourceLink: 'https://github.com/Ayokunnumi1',
+    image: 'images/RPS.png',
+    technologies: ['HTML', 'CSS', 'javascript'],
+    liveLink: 'https://ayokunnumi1.github.io/Odin-Rock-Paper-Scissors/',
+    sourceLink: 'git@github.com:Ayokunnumi1/Odin-Rock-Paper-Scissors.git',
     id: 'uber',
   },
 ];
@@ -63,15 +63,15 @@ const projectElements = projects.map((project) => (
   `       <article class="project-container">
   <div>
       <a href="">
-          <img src="${project.image}" alt="">
+          <img src="${project.image}" alt="" class="project-img">
       </a>
   </div>
   <div class="project-description">
       <h2>${project.name}</h2>
       <ul class="experience-list">
           <li>CANOPY</li>
-          <li>Backend Dev</li>
-          <li>2015</li>
+          <li>FrontEnd Dev</li>
+          <li>2023</li>
       </ul>
       <p>${project.description}</p>
       <ul class="skill-list">
