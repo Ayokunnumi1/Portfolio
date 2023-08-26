@@ -99,8 +99,8 @@ function showPopUp(btn) {
  <div class="project-description">
       <ul class="experience-list">
           <li>CANOPY</li>
-          <li>Backend Dev</li>
-          <li>2015</li>
+          <li>FrontEnd Dev</li>
+          <li>2023</li>
       </ul>
       <img class="detail-img" src=${objElement.image} alt="">
  </div>
