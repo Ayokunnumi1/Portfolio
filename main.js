@@ -7,30 +7,30 @@ const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
 const projects = [
   {
-    name: 'To Do List Website',
-    description: 'To-do list" is a tool that helps to organize your day',
-    image: 'images/To-do-list.png',
-    technologies: ['HTML', 'CSS', 'javascript'],
-    liveLink: 'https://ayokunnumi1.github.io/To-Do-List-App/dist/',
-    sourceLink: 'https://github.com/Ayokunnumi1/To-Do-List-App',
+    name: 'Space Travelars Hub',
+    description: 'This application allow users to book rockets and join selected space missions.',
+    image: 'images/Space-Travellers.png',
+    technologies: ['HTML', 'CSS', 'Javascript', 'React', 'Redux'],
+    liveLink: 'https://ayokunnumi1.github.io/space-travelers-hub/',
+    sourceLink: 'https://github.com/Ayokunnumi1/space-travelers-hub',
     id: 'tonic',
   },
   {
-    name: 'Awesome Books Library',
-    description: 'It showcases my skills and expertise in creating Objects with Classes and using Add Event Listeners.',
-    image: 'images/Awesome-books.png',
-    technologies: ['HTML', 'CSS', 'javascript'],
-    liveLink: 'https://ayokunnumi1.github.io/Awesome-Books/',
-    sourceLink: 'git@github.com:Ayokunnumi1/Awesome-Books.git',
+    name: 'Reelflix Movies',
+    description: 'A movie website that displays several Tv shows from an external API',
+    image: 'images/reelflix.png',
+    technologies: ['HTML', 'CSS', 'Javascript'],
+    liveLink: 'https://ayokunnumi1.github.io/reelflix-movies/dist/',
+    sourceLink: 'https://github.com/Ayokunnumi1/reelflix-movies',
     id: 'stories',
   },
   {
-    name: 'Conference Page',
-    description: 'This repository contains the source codes for a Conference Page built for Content creators',
-    image: 'images/conference-page.png',
-    technologies: ['HTML', 'CSS', 'javascript'],
-    liveLink: 'https://ayokunnumi1.github.io/Conference-Page/',
-    sourceLink: 'git@github.com:Ayokunnumi1/Conference-Page.git',
+    name: 'LeaderBoard',
+    description: 'The leaderboard website displays scores submitted by different players. It also allows you to submit your score.',
+    image: 'images/leaderBoard.png',
+    technologies: ['HTML', 'CSS', 'Javascript'],
+    liveLink: 'https://ayokunnumi1.github.io/Leaderboard/dist/',
+    sourceLink: 'https://github.com/Ayokunnumi1/Leaderboard',
     id: 'facebook',
   },
   {
@@ -61,7 +61,7 @@ links.forEach((link) => {
 
 const projectElements = projects.map((project) => (
   `       <article class="project-container">
-  <div>
+  <div class="project-img-container>
       <a href="">
           <img src="${project.image}" alt="" class="project-img">
       </a>
