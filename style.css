@@ -577,9 +577,8 @@ form textarea {
 }
 
 .project-img {
-  width: 544px;
-  height: 448px;
   object-fit: contain;
+  margin-top: 10px;
 }
 
 @media (min-width: 768px) {
