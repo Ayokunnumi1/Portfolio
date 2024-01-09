@@ -7,6 +7,24 @@ const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
 const projects = [
   {
+    name: 'Recipe App',
+    description: 'The Recipe app keeps track of all your recipes, ingredients, and inventory.',
+    image: 'images/recipe.png',
+    technologies: ['Ruby On Rails', 'HTML', 'CSS', 'Javascript'],
+    // liveLink: 'https://ayokunnumi1.github.io/space-travelers-hub/',
+    sourceLink: 'https://github.com/Ayokunnumi1/ayk-recipe-app',
+    id: 'tonic',
+  },
+  {
+    name: 'Blog',
+    description: 'This application is a fully functional website that shows the list of posts and allows readers to interact with them',
+    image: 'images/blog.png',
+    technologies: ['Ruby On Rails', 'HTML', 'CSS', 'Javascript'],
+    // liveLink: 'https://ayokunnumi1.github.io/space-travelers-hub/',
+    sourceLink: 'https://github.com/Ayokunnumi1/blog_app',
+    id: 'tonic',
+  },
+  {
     name: 'Space Travelars Hub',
     description: 'This application allow users to book rockets and join selected space missions.',
     image: 'images/Space-Travellers.png',
@@ -35,7 +53,7 @@ const projects = [
   },
   {
     name: 'Rock Paper Scissors',
-    description: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
+    description: 'A fun game built with vanilla javascript',
     image: 'images/RPS.png',
     technologies: ['HTML', 'CSS', 'javascript'],
     liveLink: 'https://ayokunnumi1.github.io/Odin-Rock-Paper-Scissors/',
