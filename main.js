@@ -7,22 +7,22 @@ const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
 const projects = [
   {
-    name: 'Recipe App',
-    description: 'The Recipe app keeps track of all your recipes, ingredients, and inventory.',
-    image: 'images/recipe.png',
-    technologies: ['Ruby On Rails', 'HTML', 'CSS', 'Javascript'],
+    name: 'Mentor Me Now',
+    description: 'Mentor Me Now is a user-friendly platform connecting individuals with expert mentors for personal and professional growth. Seamlessly navigate through curated mentors, manage reservations, and harness the power of mentorship to accelerate your journey to success.',
+    image: 'images/mentor-me-now.gif',
+    technologies: ['Ruby On Rails', 'React', 'Redux', 'tailwind', 'Postgres'],
     // liveLink: 'https://ayokunnumi1.github.io/space-travelers-hub/',
-    sourceLink: 'https://github.com/Ayokunnumi1/ayk-recipe-app',
-    id: 'tonic',
+    sourceLink: 'https://github.com/Ayokunnumi1/mentor_me_now_back_end',
+    id: 'mentor',
   },
   {
-    name: 'Blog',
-    description: 'This application is a fully functional website that shows the list of posts and allows readers to interact with them',
-    image: 'images/blog.png',
-    technologies: ['Ruby On Rails', 'HTML', 'CSS', 'Javascript'],
-    // liveLink: 'https://ayokunnumi1.github.io/space-travelers-hub/',
-    sourceLink: 'https://github.com/Ayokunnumi1/blog_app',
-    id: 'tonic',
+    name: 'Wise Spender',
+    description: 'This is a mobile web app where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what',
+    image: 'images/budget-app.gif',
+    technologies: ['Ruby On Rails', 'Javascript', 'Postgres'],
+    liveLink: 'https://wise-spender.onrender.com/',
+    sourceLink: 'https://github.com/Ayokunnumi1/wise-spender',
+    id: 'wise-spender',
   },
   {
     name: 'Space Travelars Hub',
@@ -88,7 +88,7 @@ const projectElements = projects.map((project) => (
       <h2>${project.name}</h2>
       <ul class="experience-list">
           <li>CANOPY</li>
-          <li>FrontEnd Dev</li>
+          <li>Full stack Dev</li>
           <li>2023</li>
       </ul>
       <p>${project.description}</p>
@@ -109,6 +109,7 @@ projectSection.insertAdjacentHTML('beforeend', projectElements);
 const seeProjectBtns = projectSection.querySelectorAll('.project-description button');
 function showPopUp(btn) {
   const objElement = projects.find((project) => project.id === btn.id);
+  // console.log(objElement);
   const element = ` <div class="overlay">
   <div class="head">
       <h2>${objElement.name}</h2>
@@ -117,7 +118,7 @@ function showPopUp(btn) {
  <div class="project-description">
       <ul class="experience-list">
           <li>CANOPY</li>
-          <li>FrontEnd Dev</li>
+          <li>Full stack Dev</li>
           <li>2023</li>
       </ul>
       <img class="detail-img" src=${objElement.image} alt="">
