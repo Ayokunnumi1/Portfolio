@@ -11,7 +11,7 @@ const projects = [
     description: 'Mentor Me Now is a user-friendly platform connecting individuals with expert mentors for personal and professional growth. Seamlessly navigate through curated mentors, manage reservations, and harness the power of mentorship to accelerate your journey to success.',
     image: 'images/mentor-me-now.gif',
     technologies: ['Ruby On Rails', 'React', 'Redux', 'tailwind', 'Postgres'],
-    // liveLink: 'https://ayokunnumi1.github.io/space-travelers-hub/',
+    liveLink: 'https://mentor-me-now.vercel.app/',
     sourceLink: 'https://github.com/Ayokunnumi1/mentor_me_now_front_end',
     id: 'mentor',
   },
