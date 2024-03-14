@@ -70,6 +70,7 @@ header {
   right: 10%;
   z-index: 1000;
   cursor: pointer;
+  display: none;
 }
 
 .toolbar-section a {
@@ -654,6 +655,10 @@ form textarea {
   }
 
   .see-break {
+    display: none;
+  }
+
+  .close-container {
     display: none;
   }
 
