@@ -189,6 +189,16 @@ rightArrow.addEventListener('click', () => {
   }
 });
 
+// Activate scroll effect
+window.addEventListener('scroll', () => {
+  const toolbar = document.querySelector('.toolbar-section');
+  if (window.pageYOffset > 0) {
+    toolbar.classList.add('scrolled');
+  } else {
+    toolbar.classList.remove('scrolled');
+  }
+});
+
 // start-contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
