@@ -38,7 +38,7 @@ const projects = [
   {
     name: 'LeaderBoard',
     description: 'The leaderboard website displays scores submitted by different players. It also allows you to submit your score.',
-    image: './images/leaderboard-gif.gif',
+    image: './images/Leaderboard-gif.gif',
     technologies: ['HTML', 'CSS', 'Javascript'],
     liveLink: 'https://ayokunnumi1.github.io/Leaderboard/dist/',
     sourceLink: 'https://github.com/Ayokunnumi1/Leaderboard',
