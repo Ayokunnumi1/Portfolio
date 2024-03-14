@@ -104,7 +104,11 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: auto;
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  /* box-shadow: 1px 1px 10px 1px #0000001f; */
+  /* border: 3px solid red; */
 }
 
 .toolbar-hamburger {
@@ -584,6 +588,14 @@ form textarea {
 .project-img {
   object-fit: contain;
   margin-top: 10px;
+}
+
+.arrow-down {
+  display: none;
+}
+
+.show-frameworks {
+  display: none;
 }
 
 @media (min-width: 768px) {
