@@ -40,7 +40,7 @@ const projects = [
   {
     name: 'LeaderBoard',
     description: 'The leaderboard website displays scores submitted by different players. It also allows you to submit your score.',
-    image: 'images/leaderboard.gif',
+    image: 'images/leaderboard-gif.gif',
     technologies: ['HTML', 'CSS', 'Javascript'],
     liveLink: 'https://ayokunnumi1.github.io/Leaderboard/dist/',
     sourceLink: 'https://github.com/Ayokunnumi1/Leaderboard',
@@ -68,11 +68,13 @@ const projects = [
 hamburgerIcon.addEventListener('click', () => {
   navLink.classList.add('show-link');
   headerHeroSection.classList.add('blur-header-hero-section');
+  closeIcon.style.display = 'block';
 });
 
 closeIcon.addEventListener('click', () => {
   navLink.classList.remove('show-link');
   headerHeroSection.classList.remove('blur-header-hero-section');
+  closeIcon.style.display = 'none';
 });
 links.forEach((link) => {
   link.addEventListener('click', () => {
