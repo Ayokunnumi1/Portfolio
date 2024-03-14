@@ -5,6 +5,10 @@ const links = document.querySelectorAll('.nav-link > li');
 const headerHeroSection = document.querySelector('.header-hero-section');
 const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
+const rightArrow = document.querySelector('.right-arrow');
+// const arrowDown = document.querySelector('.arrow-down');
+const showFrameworks = document.querySelector('.show-frameworks');
+
 const projects = [
   {
     name: 'Mentor Me Now',
@@ -12,7 +16,7 @@ const projects = [
     image: 'images/mentor-me-now.gif',
     technologies: ['Ruby On Rails', 'React', 'Redux', 'tailwind', 'Postgres'],
     liveLink: 'https://mentor-me-noww.vercel.app/',
-    sourceLink: 'https://github.com/Ayokunnumi1/mentor_me_now_front_end',
+    sourceLink: 'https://github.com/Ayokunnumi1/mentor_me_now_front_end_app',
     id: 'mentor',
   },
   {
@@ -138,13 +142,13 @@ function showPopUp(btn) {
 }
       </ul>
       <div class="see-container">
-        <a href=${objElement.liveLink}>
+        <a href=${objElement.liveLink} target="_blank">
           <button>
             <span>see live</span>
             <img src="images/see-live-icon.png" alt="">
           </button>
         </a>
-      <a href=${objElement.sourceLink}>
+      <a href=${objElement.sourceLink} target="_blank">
         <button>
           <span>see source</span>
           <img src="images/see-source-icon.png" alt="">
@@ -171,6 +175,18 @@ seeProjectBtns.forEach((btn) => {
     });
   });
 });
+
+// Activate framework dropdown
+rightArrow.addEventListener('click', () => {
+  if (rightArrow.src.endsWith('images/chevron_right.png')) {
+    showFrameworks.style.display = 'block';
+    rightArrow.src = 'images/chevron_down.png';
+  } else {
+    showFrameworks.style.display = 'none';
+    rightArrow.src = 'images/chevron_right.png';
+  }
+});
+
 // start-contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
