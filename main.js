@@ -6,10 +6,6 @@ const headerHeroSection = document.querySelector('.header-hero-section');
 const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
 const dropdowns = document.querySelectorAll('.dropdown');
-// const dropDownList = document.querySelectorAll('.dropdown-list');
-// const rightArrow = document.querySelector('.right-arrow');
-// const arrowDown = document.querySelector('.arrow-down');
-// const showFrameworks = document.querySelector('.show-frameworks');
 
 const projects = [
   {
@@ -42,7 +38,7 @@ const projects = [
   {
     name: 'LeaderBoard',
     description: 'The leaderboard website displays scores submitted by different players. It also allows you to submit your score.',
-    image: 'images/leaderboard-gif.gif',
+    image: './images/leaderboard-gif.gif',
     technologies: ['HTML', 'CSS', 'Javascript'],
     liveLink: 'https://ayokunnumi1.github.io/Leaderboard/dist/',
     sourceLink: 'https://github.com/Ayokunnumi1/Leaderboard',
