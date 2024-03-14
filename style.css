@@ -70,6 +70,7 @@ header {
   right: 10%;
   z-index: 1000;
   cursor: pointer;
+  display: none;
 }
 
 .toolbar-section a {
@@ -104,7 +105,17 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  margin: auto;
+  position: fixed;
+  left: 5%;
+  right: 5%;
+}
+
+.toolbar-section.scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .toolbar-hamburger {
@@ -642,6 +653,10 @@ form textarea {
   }
 
   .see-break {
+    display: none;
+  }
+
+  .close-container {
     display: none;
   }
 

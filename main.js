@@ -5,14 +5,20 @@ const links = document.querySelectorAll('.nav-link > li');
 const headerHeroSection = document.querySelector('.header-hero-section');
 const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
+const dropdowns = document.querySelectorAll('.dropdown');
+// const dropDownList = document.querySelectorAll('.dropdown-list');
+// const rightArrow = document.querySelector('.right-arrow');
+// const arrowDown = document.querySelector('.arrow-down');
+// const showFrameworks = document.querySelector('.show-frameworks');
+
 const projects = [
   {
     name: 'Mentor Me Now',
     description: 'Mentor Me Now is a user-friendly platform connecting individuals with expert mentors for personal and professional growth. Seamlessly navigate through curated mentors, manage reservations, and harness the power of mentorship to accelerate your journey to success.',
     image: 'images/mentor-me-now.gif',
     technologies: ['Ruby On Rails', 'React', 'Redux', 'tailwind', 'Postgres'],
-    liveLink: 'https://mentor-me-now.vercel.app/',
-    sourceLink: 'https://github.com/Ayokunnumi1/mentor_me_now_front_end',
+    liveLink: 'https://mentor-me-noww.vercel.app/',
+    sourceLink: 'https://github.com/Ayokunnumi1/mentor_me_now_front_end_app',
     id: 'mentor',
   },
   {
@@ -36,7 +42,7 @@ const projects = [
   {
     name: 'LeaderBoard',
     description: 'The leaderboard website displays scores submitted by different players. It also allows you to submit your score.',
-    image: 'images/leaderboard.png',
+    image: 'images/leaderboard-gif.gif',
     technologies: ['HTML', 'CSS', 'Javascript'],
     liveLink: 'https://ayokunnumi1.github.io/Leaderboard/dist/',
     sourceLink: 'https://github.com/Ayokunnumi1/Leaderboard',
@@ -64,11 +70,13 @@ const projects = [
 hamburgerIcon.addEventListener('click', () => {
   navLink.classList.add('show-link');
   headerHeroSection.classList.add('blur-header-hero-section');
+  closeIcon.style.display = 'block';
 });
 
 closeIcon.addEventListener('click', () => {
   navLink.classList.remove('show-link');
   headerHeroSection.classList.remove('blur-header-hero-section');
+  closeIcon.style.display = 'none';
 });
 links.forEach((link) => {
   link.addEventListener('click', () => {
@@ -138,13 +146,13 @@ function showPopUp(btn) {
 }
       </ul>
       <div class="see-container">
-        <a href=${objElement.liveLink}>
+        <a href=${objElement.liveLink} target="_blank">
           <button>
             <span>see live</span>
             <img src="images/see-live-icon.png" alt="">
           </button>
         </a>
-      <a href=${objElement.sourceLink}>
+      <a href=${objElement.sourceLink} target="_blank">
         <button>
           <span>see source</span>
           <img src="images/see-source-icon.png" alt="">
@@ -171,6 +179,32 @@ seeProjectBtns.forEach((btn) => {
     });
   });
 });
+
+dropdowns.forEach((dropdown) => {
+  const arrow = dropdown.querySelector('.arrow-down');
+  const dropDownList = dropdown.querySelector('.dropdown-list');
+
+  arrow.addEventListener('click', () => {
+    if (arrow.src.endsWith('images/chevron_down.png')) {
+      dropDownList.style.display = 'none';
+      arrow.src = 'images/chevron_right.png';
+    } else {
+      dropDownList.style.display = 'block';
+      arrow.src = 'images/chevron_down.png';
+    }
+  });
+});
+
+// Activate scroll effect
+window.addEventListener('scroll', () => {
+  const toolbar = document.querySelector('.toolbar-section');
+  if (window.pageYOffset > 0) {
+    toolbar.classList.add('scrolled');
+  } else {
+    toolbar.classList.remove('scrolled');
+  }
+});
+
 // start-contact-form-validation
 const nameErrorMsg = document.getElementById('name-error-msg');
 const emailErrorMsg = document.getElementById('email-error-msg');
