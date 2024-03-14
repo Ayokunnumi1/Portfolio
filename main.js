@@ -5,9 +5,11 @@ const links = document.querySelectorAll('.nav-link > li');
 const headerHeroSection = document.querySelector('.header-hero-section');
 const projectSection = document.querySelector('.project-section');
 const popupSection = document.querySelector('.pop-up');
-const rightArrow = document.querySelector('.right-arrow');
+const dropdowns = document.querySelectorAll('.dropdown');
+// const dropDownList = document.querySelectorAll('.dropdown-list');
+// const rightArrow = document.querySelector('.right-arrow');
 // const arrowDown = document.querySelector('.arrow-down');
-const showFrameworks = document.querySelector('.show-frameworks');
+// const showFrameworks = document.querySelector('.show-frameworks');
 
 const projects = [
   {
@@ -178,15 +180,19 @@ seeProjectBtns.forEach((btn) => {
   });
 });
 
-// Activate framework dropdown
-rightArrow.addEventListener('click', () => {
-  if (rightArrow.src.endsWith('images/chevron_right.png')) {
-    showFrameworks.style.display = 'block';
-    rightArrow.src = 'images/chevron_down.png';
-  } else {
-    showFrameworks.style.display = 'none';
-    rightArrow.src = 'images/chevron_right.png';
-  }
+dropdowns.forEach((dropdown) => {
+  const arrow = dropdown.querySelector('.arrow-down');
+  const dropDownList = dropdown.querySelector('.dropdown-list');
+
+  arrow.addEventListener('click', () => {
+    if (arrow.src.endsWith('images/chevron_down.png')) {
+      dropDownList.style.display = 'none';
+      arrow.src = 'images/chevron_right.png';
+    } else {
+      dropDownList.style.display = 'block';
+      arrow.src = 'images/chevron_down.png';
+    }
+  });
 });
 
 // Activate scroll effect

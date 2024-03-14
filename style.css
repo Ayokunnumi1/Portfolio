@@ -597,14 +597,6 @@ form textarea {
   margin-top: 10px;
 }
 
-.arrow-down {
-  display: none;
-}
-
-.show-frameworks {
-  display: none;
-}
-
 @media (min-width: 768px) {
   .header-hero-section {
     width: 90%;
