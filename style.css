@@ -104,10 +104,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
   position: fixed;
   left: 5%;
   right: 5%;
+  top: 0;
 }
 
 .toolbar-section.scrolled {
